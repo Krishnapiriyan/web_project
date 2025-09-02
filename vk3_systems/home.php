@@ -322,7 +322,5 @@ document.querySelectorAll('.swiper').forEach(function(swiperEl){
    content.addEventListener('pointermove', (e)=>{ if(!isDown) return; const x = e.clientX; const walk = (startX - x); content.scrollLeft = scrollLeft + walk; });
 })();
 </script>
-
-
 </body>
 </html>
