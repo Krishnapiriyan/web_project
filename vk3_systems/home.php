@@ -223,6 +223,7 @@ include 'components/wishlist_cart.php';
    </div>
 
 </section>
+
 <p>new paragraph</p>
 
 <?php include 'components/footer.php'; ?>
