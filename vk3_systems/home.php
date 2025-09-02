@@ -180,6 +180,8 @@ include 'components/wishlist_cart.php';
 
 </section>
 
+
+
 <section class="home-products">
 
    <h1 class="heading">latest products</h1>
@@ -224,6 +226,7 @@ include 'components/wishlist_cart.php';
 
 </section>
 
+<h1>hi peyan</h1>
 
 <?php include 'components/footer.php'; ?>
 
