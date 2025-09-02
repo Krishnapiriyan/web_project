@@ -323,7 +323,6 @@ document.querySelectorAll('.swiper').forEach(function(swiperEl){
 })();
 </script>
 
-<h1>new line</h1>
 
 </body>
 </html>
