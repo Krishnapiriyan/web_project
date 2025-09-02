@@ -224,8 +224,6 @@ include 'components/wishlist_cart.php';
 
 </section>
 
-<p>new paragraph</p>
-
 <?php include 'components/footer.php'; ?>
 
 <!-- removed Swiper JS include to avoid external framework setup -->
@@ -324,6 +322,8 @@ document.querySelectorAll('.swiper').forEach(function(swiperEl){
    content.addEventListener('pointermove', (e)=>{ if(!isDown) return; const x = e.clientX; const walk = (startX - x); content.scrollLeft = scrollLeft + walk; });
 })();
 </script>
+
+<h1>new line</h1>
 
 </body>
 </html>
