@@ -39,72 +39,72 @@ include 'components/wishlist_cart.php';
 
    <div class="swiper home-slider">
    
-   <div class="swiper-wrapper">
+      <div class="swiper-wrapper">
 
-      <div class="swiper-slide slide">
-         <div class="image">
-            <img src="new_image\home_slider\1.png" alt="">
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="new_image\home_slider\1.png" alt="">
+            </div>
+            <div class="content">
+                  <h3>Fast Delivery Service</h3>
+                  <span>Perfect for students, professionals, and gamers who want their laptops without the wait.</span>
+                  <a href="orders.php" class="btn">order now</a>
+            </div>
          </div>
-         <div class="content">
-               <h3>Fast Delivery Service</h3>
-               <span>Perfect for students, professionals, and gamers who want their laptops without the wait.</span>
-               <a href="orders.php" class="btn">order now</a>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="new_image\home_slider\2.png" alt="">
+            </div>
+            <div class="content">
+               <h3>New Gaming Laptop Series Available!</h3>
+               <span>Discover powerful gaming laptops – cutting-edge technology, fast processors, advanced graphics, and unbeatable gaming experience.</span>
+               <a href="shop.php" class="btn">shop now</a>
+            </div>
          </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="new_image\home_slider\3.png" alt="">
+            </div>
+            <div class="content">
+            <h3>Wide selection of NVIDIA RTX</h3>   
+            <span>Experience ultimate gaming with our RTX laptop range – powerful graphics, smooth performance, immersive displays included.</span>
+               <a href="shop.php" class="btn">shop now</a>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="new_image\home_slider\4.png" alt="">
+            </div>
+            <div class="content">
+               <h3>ROG laptops deliver maximum processor power</h3>
+               <span>ROG laptops with maximum processors – ultimate speed, exceptional performance, and immersive gaming experiences.</span>
+               <a href="shop.php" class="btn">shop now</a>
+            </div>
+         </div>
+
+         <div class="swiper-slide slide">
+            <div class="image">
+               <img src="new_image\home_slider\5.png" alt="">
+            </div>
+            <div class="content">
+               <h3>Exclusive university student offers</h3>
+               <span>University student discounts – grab high-performance laptops and accessories at unbeatable prices today.</span>
+               <a href="shop.php" class="btn">shop now</a>
+            </div>
+         </div>
+
       </div>
-
-      <div class="swiper-slide slide">
-         <div class="image">
-            <img src="new_image\home_slider\2.png" alt="">
-         </div>
-         <div class="content">
-            <h3>New Gaming Laptop Series Available!</h3>
-            <span>Discover powerful gaming laptops – cutting-edge technology, fast processors, advanced graphics, and unbeatable gaming experience.</span>
-            <a href="shop.php" class="btn">shop now</a>
-         </div>
+   
+      <div class="flex-direction-nav">
+         <li class="flex-nav-prev"><a class="flex-prev" href="#" aria-label="Previous">&#10094;</a></li>
+         <li class="flex-nav-next"><a class="flex-next" href="#" aria-label="Next">&#10095;</a></li>
       </div>
-
-      <div class="swiper-slide slide">
-         <div class="image">
-            <img src="new_image\home_slider\3.png" alt="">
-         </div>
-         <div class="content">
-         <h3>Wide selection of NVIDIA RTX</h3>   
-         <span>Experience ultimate gaming with our RTX laptop range – powerful graphics, smooth performance, immersive displays included.</span>
-            <a href="shop.php" class="btn">shop now</a>
-         </div>
-      </div>
-
-      <div class="swiper-slide slide">
-         <div class="image">
-            <img src="new_image\home_slider\4.png" alt="">
-         </div>
-         <div class="content">
-            <h3>ROG laptops deliver maximum processor power</h3>
-            <span>ROG laptops with maximum processors – ultimate speed, exceptional performance, and immersive gaming experiences.</span>
-            <a href="shop.php" class="btn">shop now</a>
-         </div>
-      </div>
-
-      <div class="swiper-slide slide">
-         <div class="image">
-            <img src="new_image\home_slider\5.png" alt="">
-         </div>
-         <div class="content">
-            <h3>Exclusive university student offers</h3>
-            <span>University student discounts – grab high-performance laptops and accessories at unbeatable prices today.</span>
-            <a href="shop.php" class="btn">shop now</a>
-         </div>
-      </div>
-
+   
    </div>
-<div class="flex-direction-nav">
-      <li class="flex-nav-prev"><a class="flex-prev" href="#" aria-label="Previous">&#10094;</a></li>
-      <li class="flex-nav-next"><a class="flex-next" href="#" aria-label="Next">&#10095;</a></li>
-</div>
-      <div class="swiper-pagination"></div>
-
-   </div>
-
+   <div class="swiper-pagination"></div>
 </section>
 
 </div>
@@ -154,7 +154,7 @@ include 'components/wishlist_cart.php';
                      <img src="images/icon-6.png" alt="washing machine">
                      <h3>washing</h3>
                   </a>
-               </div>
+               </div>-
                <div class="item">
                   <a href="category.php?category=smartphone">
                      <img src="images/icon-7.png" alt="smartphone">

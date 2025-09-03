@@ -55,9 +55,31 @@ html{
    overflow-x: hidden;
 }
 
-body{
+/* body{
    background-color: var(--light-bg);
+} */
+
+body {
+  /* height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center; */
+
+  background: linear-gradient(-45deg, #0f2027, #0e152d, #20282c, #0f052c);
+  /* background-size: 600% 600%; */
+  animation: neonGradient 15s ease infinite;
 }
+
+@keyframes neonGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 section{
    padding:1.5rem;
@@ -284,6 +306,8 @@ header .flex .gif-video {
    background-position: center;
    /* width: 100vh;
    height: 100vh; */
+   padding-top: 30px;
+   padding-bottom: 30px;
 
 }
 /* 
@@ -1222,8 +1246,80 @@ header .flex .gif-video {
 }
 
 
+/* Slider specific styles (home slider) */
+/* global pagination/dots & nav for native sliders */
+.swiper {
+   position: relative;
+   overflow: hidden;
+}
 
+.swiper-wrapper {
+   will-change: transform;
+}
 
+.slider-pagination {
+   position: relative;
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 6px;
+   z-index: 5;
+}
+
+.slider-dot {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: #ddd;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+}
+
+.slider-dot.active {
+   background: #333;
+}
+
+.flex-direction-nav {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   right: 0;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+   padding: 0 10px;
+   z-index: 60;
+   opacity: 0;
+   transition: opacity 180ms ease;
+   pointer-events: none;
+}
+
+/* arrows hidden by default, shown on hover over the slider container */
+.swiper:hover .flex-direction-nav {
+   opacity: 1;
+   pointer-events: auto;
+}
+
+.flex-direction-nav a {
+   background: rgba(0, 0, 0, 0.4);
+   color: #fff;
+   padding: 8px 10px;
+   border-radius: 4px;
+   text-decoration: none;
+   font-size: 18px;
+   display: inline-block;
+}
+
+.flex-direction-nav a:hover {
+   background: rgba(0, 0, 0, 0.6);
+}
+
+/* also show when a child receives focus (keyboard/touch) */
+.flex-direction-nav a:focus {
+   outline: 2px solid rgba(255, 255, 255, 0.5);
+}
 
 /* **************************************** */
 
