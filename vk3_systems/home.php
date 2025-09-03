@@ -281,6 +281,9 @@ document.querySelectorAll('.swiper').forEach(function(swiperEl){
    swiperEl.addEventListener('mouseleave', ()=> { clearInterval(auto); auto = setInterval(next,4000); });
 });
 
+
+
+
 // basic styles for pagination and dots
 (function(){
    const style = document.createElement('style');
@@ -329,3 +332,8 @@ document.querySelectorAll('.swiper').forEach(function(swiperEl){
 
 </body>
 </html>
+
+
+
+
+vanushan veruli 
