@@ -4,12 +4,6 @@ include '../components/connect.php';
 
 session_start();
 
-$admin_id = $_SESSION['admin_id'];
-
-if(!isset($admin_id)){
-   header('location:admin_login.php');
-}
-
 if(isset($_POST['submit'])){
 
    $name = $_POST['name'];
@@ -45,7 +39,6 @@ if(isset($_POST['submit'])){
          $message[] = 'new admin registered successfully!';
       }
    }
-
 }
 
 ?>
@@ -67,38 +60,37 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-<?php include '../components/admin_header.php'; ?>
+ <?php
+   if(isset($message)){
+      foreach($message as $message){
+         echo '
+         <div class="message">
+            <span>'.$message.'</span>
+            <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+         </div>
+         ';
+      }
+   }
+?>
+<div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
 
-<!-- <section class="form-container">
-
-   <form action="" method="post">
-      <h3>register now</h3>
-      <input type="text" name="name" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" required placeholder="enter your password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="cpass" required placeholder="confirm your password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="register now" class="btn" name="submit">
-   </form>
-
-</section> -->
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-    
 <div class="banner">
+
    <div class="content">
-      
       <section class="newform-container">
 
          <div class="wrapper">
@@ -110,12 +102,12 @@ if(isset($_POST['submit'])){
                         <input type="text" name="name" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-user' ></i>
                   </div>
-                  
+
                   <div class="input-box">
                         <input type="text" name="tp_num" required placeholder="enter your telephone number" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-phone' ></i>
                   </div>
-
+                  
                   <div class="input-box">
                         <input type="password" name="pass" required placeholder="enter your password" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-lock-alt' ></i>
@@ -141,10 +133,8 @@ if(isset($_POST['submit'])){
          </div>
 
       </section>
-
    </div>
 </div>
-
 
 
 
