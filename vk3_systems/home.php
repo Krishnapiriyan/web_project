@@ -375,3 +375,8 @@ include 'components/wishlist_cart.php';
 </body>
 
 </html>
+
+
+
+
+<h1>check</h1>
