@@ -56,7 +56,10 @@ html{
 }
 
 body{
-   background-color: var(--light-bg);
+   background : url(../background-home.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
 }
 
 section{
@@ -170,7 +173,8 @@ section{
 .header{
    position: sticky;
    top:0; left:0; right:0;
-   background-color: var(--nav-color);
+   background-color: transparent;
+   backdrop-filter: blur(100px);
    box-shadow: var(--box-shadow);
    z-index: 1000;
 }
@@ -218,9 +222,9 @@ header .flex .gif-video {
 }
 
 .header .flex .navbar a:hover{
-   color:var(--nav-hover-color);
+   color:var(--black);
    /* font-weight: bold; */
-   background-color:var(--nav-hover-box-color);
+   background-color:var(--white);
    border-radius: 0px 20px 0px 20px;
    padding: 5px 15px;   
    transform:revert-layer;
@@ -279,12 +283,13 @@ header .flex .gif-video {
 }
 
 .home-bg{
-   background:url(../new_image/home_bg_image.png) no-repeat;
+   /*background:url(../new_image/home_bg_image.png) no-repeat;
    /* background-size:cover; */
-   background-position: center;
+   /*background-position: center;
    /* width: 100vh;
    height: 100vh; */
-
+   background-color: transparent;
+   backdrop-filter: blur(5px);
 }
 /* 
 .home-bg .home .slide{
@@ -348,6 +353,15 @@ header .flex .gif-video {
 */
 
 /* Categories / Mixed slider — professional card-style layout */
+.category
+{
+   margin-top:5rem;
+}
+
+.heading
+{
+   color:var(--white);
+}
 .categories{
    padding: 2.4rem 0;
 }
@@ -388,8 +402,6 @@ header .flex .gif-video {
    flex: 0 0 auto;
    width: 170px; /* compact card width */
    /* background: var(--white); */
-   border-radius: 200px;
-   padding: 12px 10px;
    box-shadow: 0 8px 22px rgba(18,38,63,0.08);
    display:flex;
    flex-direction: column;
@@ -409,9 +421,9 @@ header .flex .gif-video {
 }
 
 .MS-content .item a{
-   color: var(--light-color);
+   color: var(--white);
    font-weight: 600;
-   font-size: 1.4rem;
+   font-size: 2.5rem;
    line-height:1.2;
    display:flex;
    flex-direction: column;
@@ -426,7 +438,10 @@ header .flex .gif-video {
    object-fit: contain;
    border-radius: 10px;
    background: linear-gradient(180deg, rgba(116, 113, 113, 0.02), rgba(0,0,0,0.01));
-   padding: 8px;
+}
+
+.MS-content .item img:hover{
+   background-color:var(--white);
 }
 
 .MS-content .item a > *:last-child{
@@ -1124,8 +1139,13 @@ header .flex .gif-video {
    color:var(--main-color);
 }
 
+
+
+
+
 .footer{
-   background-color: var(--white);
+   background-color: transparent;
+   backdrop-filter: blur(120px);
    /* padding-bottom: 7rem; */
 }
 
@@ -1137,8 +1157,8 @@ header .flex .gif-video {
 }
 
 .footer .grid .box h3{
-   font-size: 2rem;
-   color:var(--black);
+   font-size: 2.3rem;
+   color:var(--white);
    margin-bottom: 2rem;
    text-transform: capitalize;
 }
@@ -1146,18 +1166,18 @@ header .flex .gif-video {
 .footer .grid .box a{
    display: block;
    margin:1.5rem 0;
-   font-size: 1.7rem;
-   color:var(--light-color);
+   font-size: 2rem;
+   color:var(--white);
 }
 
 .footer .grid .box a i{
    padding-right: 1rem;
-   color:var(--main-color);
-   transition: .2s linear;
+   color:var(--red);
+   transition: 0.2s linear;
 }
 
 .footer .grid .box a:hover{
-   color:var(--main-color);
+   color:var(--red);
 }
 
 .footer .grid .box a:hover i{
@@ -1169,11 +1189,11 @@ header .flex .gif-video {
    padding: 2.5rem 2rem;
    border-top: var(--border);
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .footer .credit span{
-   color:var(--main-color);
+   color:var(--red);
 }
 
 
@@ -1422,7 +1442,7 @@ header .flex .gif-video {
       max-width: none;
       margin-top: 12px;
       background: transparent;
-      color: var(--black);
+      color: var(--white);
       text-align: center;
       padding: 0;
    }
