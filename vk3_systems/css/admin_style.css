@@ -320,6 +320,10 @@ section{
    margin-bottom: 2rem;
    text-align: center;
    text-transform: uppercase;
+   font-weight: bold;
+  background: linear-gradient(90deg, #2600ff, #7977ff, #ff0404, #ff0303);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn,
@@ -699,6 +703,7 @@ section{
    border:var(--border);
    border-radius: .5rem;
    padding:2rem;
+   background-color: transparent;
 }
 
 .add-products form .flex{
