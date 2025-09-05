@@ -57,6 +57,8 @@ if(isset($_POST['submit'])){
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
@@ -64,20 +66,73 @@ if(isset($_POST['submit'])){
 
 <?php include '../components/admin_header.php'; ?>
 
-<section class="form-container">
+<!-- <section class="form-container">
 
    <form action="" method="post">
       <h3>update profile</h3>
-      <input type="hidden" name="prev_pass" value="<?= $fetch_profile['password']; ?>">
-      <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="hidden" name="prev_pass" value="?= $fetch_profile['password']; ?>">
+      <input type="text" name="name" value="?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="old_pass" placeholder="enter old password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="new_pass" placeholder="enter new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="password" name="confirm_pass" placeholder="confirm new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
       <input type="submit" value="update now" class="btn" name="submit">
    </form>
 
-</section>
+</section> -->
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+<div class="round"></div>
+    
+<div class="banner">
+   <div class="content">
+      <section class="newform-container">
 
+         <div class="wrapper">
+               <form action="" method="post">
+                  <h1>Update Profile</h1>
+                  <!-- <p>default username = <span>admin</span><br> & password = <span>111</span></p> -->
+
+                  <input type="hidden" name="prev_pass" value="<?= $fetch_profile['password']; ?>">
+
+                  <div class="input-box">
+                     <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
+                  </div>
+
+                  <div class="input-box">
+                        <input type="password" name="old_pass" placeholder="enter old password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <i class='bx bxs-lock-alt' ></i>
+                  </div>
+
+                  <div class="input-box">
+                        <input type="password" name="new_pass" placeholder="enter new password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <i class='bx bxs-lock-alt' ></i>
+                  </div>
+
+                  <div class="input-box">
+                        <input type="password" name="confirm_pass" placeholder="confirm new password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <i class='bx bxs-lock-alt' ></i>
+                  </div>
+
+                  <button type="submit" class="btn" name="submit">Update Now</button>
+
+            </form>
+         </div>
+
+      </section>
+   </div>
+</div>   
 
 
 

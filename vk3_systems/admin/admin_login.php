@@ -24,6 +24,26 @@ if(isset($_POST['submit'])){
 
 }
 
+if(isset($_POST['reset'])){
+
+   $name = $_POST['name'];
+   $name = filter_var($name, FILTER_SANITIZE_STRING);
+   
+
+   $select_admin = $conn->prepare("SELECT * FROM `admins` WHERE name = ? ");
+   $select_admin->execute([$name]);
+   $row = $select_admin->fetch(PDO::FETCH_ASSOC);
+
+   if($select_admin->rowCount() > 0){
+      $_SESSION['admin_id'] = $row['id'];
+      header('location:reset_password.php');
+   }else{
+      $message[] = 'invalid username!';
+   }
+
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +55,8 @@ if(isset($_POST['submit'])){
    <title>login</title>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 
    <link rel="stylesheet" href="../css/admin_style.css">
 
@@ -54,7 +76,7 @@ if(isset($_POST['submit'])){
    }
 ?>
 
-<section class="form-container">
+<!-- <section class="form-container">
 
    <form action="" method="post">
       <h3>login now</h3>
@@ -64,7 +86,76 @@ if(isset($_POST['submit'])){
       <input type="submit" value="login now" class="btn" name="submit">
    </form>
 
-</section>
-   
+</section> -->
+<div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+
+<div class="banner">
+
+   <div class="content">
+         
+      <section class="newform-container">
+
+         <div class="wrapper">
+               <form action="" method="post">
+                  <h1>Admin Login</h1>
+                  <p>default username = <span>admin</span><br> & password = <span>111</span></p>
+
+                  <div class="input-box">
+                        <input type="text" name="name" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <i class='bx bxs-user' ></i>
+                  </div>
+
+                  <div class="input-box">
+                        <input type="password" name="pass" required placeholder="enter your password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <i class='bx bxs-lock-alt' ></i>
+                  </div>
+
+            <div class="remember-forgot">
+               <lable><input type="checkbox">Remember Me</lable>
+               <a href="#" id="forgot-link">Forgot Password</a>
+            </div>
+
+                  <button type="submit" class="btn" name="submit">Login</button>
+
+                  <div class="register-link">
+                        <p>Don't have an account?<a href="../admin/newregister_admin.php">Register</a></p> 
+                  </div> 
+
+            </form>
+         </div>
+
+      </section>
+   </div>
+</div>
+
+<script>
+document.getElementById('forgot-link').addEventListener('click', function(e){
+   e.preventDefault();
+   const nameInput = document.querySelector('input[name="name"]');
+   const name = nameInput ? nameInput.value.trim() : '';
+   if(!name){
+      alert('Please enter your username first');
+      nameInput && nameInput.focus();
+      return;
+   }
+   // redirect to reset page with username in querystring
+   window.location.href = 'reset_password.php?name=' + encodeURIComponent(name);
+});
+</script>
+
 </body>
 </html>
