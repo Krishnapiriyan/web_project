@@ -22,11 +22,7 @@ include 'components/wishlist_cart.php';
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>home</title>
-
-   <!-- Font Awesome for icons (kept) -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -123,50 +119,74 @@ include 'components/wishlist_cart.php';
                   <!-- category items: keep same links/images as before -->
                   <div class="item">
                      <a href="category.php?category=laptop">
-                        <img src="images/icon-1.png" alt="laptop">
-                        <h3>laptop</h3>
+                        <img src="images/laptop.png" alt="laptop">
+                        <h3>Laptop</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=tv">
-                        <img src="images/icon-2.png" alt="tv">
-                        <h3>tv</h3>
+                     <a href="category.php?category=monitor">
+                        <img src="images/monitor.png" alt="monitor">
+                        <h3>Monitor</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=camera">
-                        <img src="images/icon-3.png" alt="camera">
-                        <h3>camera</h3>
+                     <a href="category.php?category=keyboard">
+                        <img src="images/keyboard.png" alt="keyboard">
+                        <h3>Keyboard</h3>
                      </a>
                   </div>
                   <div class="item">
                      <a href="category.php?category=mouse">
-                        <img src="images/icon-4.png" alt="mouse">
-                        <h3>mouse</h3>
+                        <img src="images/mouse.png" alt="mouse">
+                        <h3>Mouse</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=fridge">
-                        <img src="images/icon-5.png" alt="fridge">
-                        <h3>fridge</h3>
+                     <a href="category.php?category=processor">
+                        <img src="images/processor.png" alt="processor">
+                        <h3>Processor</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=washing">
-                        <img src="images/icon-6.png" alt="washing machine">
-                        <h3>washing</h3>
+                     <a href="category.php?category=graphic_card">
+                        <img src="images/graphic-card.png" alt="graphic_card">
+                        <h3>Graphic-card</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=smartphone">
-                        <img src="images/icon-7.png" alt="smartphone">
-                        <h3>smartphone</h3>
+                     <a href="category.php?category=flash_drive">
+                        <img src="images/flash-drive.png" alt="flash_drive">
+                        <h3>Flash-Drive</h3>
                      </a>
                   </div>
                   <div class="item">
-                     <a href="category.php?category=watch">
-                        <img src="images/icon-8.png" alt="watch">
-                        <h3>watch</h3>
+                     <a href="category.php?category=ram">
+                        <img src="images/ram.png" alt="ram">
+                        <h3>Ram</h3>
+                     </a>
+                  </div>
+                  <div class="item">
+                     <a href="category.php?category=hard_disk">
+                        <img src="images/hard-disk-drive.png" alt="hard_disk">
+                        <h3>HardDisk</h3>
+                     </a>
+                  </div>
+                  <div class="item">
+                     <a href="category.php?category=speaker">
+                        <img src="images/speaker.png" alt="speaker">
+                        <h3>Speaker</h3>
+                     </a>
+                  </div>
+                  <div class="item">
+                     <a href="category.php?category=webcam">
+                        <img src="images/webcam.png" alt="webcam">
+                        <h3>WebCam</h3>
+                     </a>
+                  </div>
+                  <div class="item">
+                     <a href="category.php?category=headphone">
+                        <img src="images/headphones.png" alt="headphone">
+                        <h3>Headphones</h3>
                      </a>
                   </div>
                </div>
