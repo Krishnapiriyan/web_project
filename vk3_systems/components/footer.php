@@ -20,10 +20,10 @@
 
       <div class="box">
          <h3>contact us</h3>
-         <a href="tel:1234567890"><i class="fas fa-phone"></i> +123 456 7899</a>
-         <a href="tel:11122233333"><i class="fas fa-phone"></i> +111 222 3333</a>
-         <a href="mailto:shaikh@gmail.com"><i class="fas fa-envelope"></i> shaikh@gmail.com</a>
-         <a href="https://www.google.com/myplace"><i class="fas fa-map-marker-alt"></i> mumbai, india - 400104 </a>
+         <a href="tel:+94763967459"><i class="fas fa-phone"></i> +94 76 396 7458</a>
+         <a href="tel:+94765468954"><i class="fas fa-phone"></i> +94 76 880 0280</a>
+         <a href="mailto:kaspus@gmail.com"><i class="fas fa-envelope"></i> kaspus@gmail.com</a>
+         <a href="https://maps.app.goo.gl/MU7Za5jr17nQWpZ86"><i class="fas fa-map-marker-alt"></i> Columbuthurai </a>
       </div>
 
       <div class="box">
@@ -36,6 +36,6 @@
 
    </section>
 
-   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>mr. web designer</span> | all rights reserved!</div>
+   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>mr.Krishnapiriyan</span> | all rights reserved!</div>
 
 </footer>

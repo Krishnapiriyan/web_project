@@ -22,7 +22,11 @@ include 'components/wishlist_cart.php';
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>home</title>
+
+   <!-- Font Awesome for icons (kept) -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -107,146 +111,54 @@ include 'components/wishlist_cart.php';
 
    </div>
 
+    <div class="home-bg">
 
-   <section class="category">
+        <section class="home">
 
-      <h1 class="heading">shop by category</h1>
+            <div class="swiper home-slider">
 
-      <div class="categories">
-         <div class="container">
-            <div id="mixedSlider" class="ms-animating">
-               <div class="MS-content">
-                  <!-- category items: keep same links/images as before -->
-                  <div class="item">
-                     <a href="category.php?category=laptop">
-                        <img src="images/laptop.png" alt="laptop">
-                        <h3>Laptop</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=monitor">
-                        <img src="images/monitor.png" alt="monitor">
-                        <h3>Monitor</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=keyboard">
-                        <img src="images/keyboard.png" alt="keyboard">
-                        <h3>Keyboard</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=mouse">
-                        <img src="images/mouse.png" alt="mouse">
-                        <h3>Mouse</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=processor">
-                        <img src="images/processor.png" alt="processor">
-                        <h3>Processor</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=graphic_card">
-                        <img src="images/graphic-card.png" alt="graphic_card">
-                        <h3>Graphic-card</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=flash_drive">
-                        <img src="images/flash-drive.png" alt="flash_drive">
-                        <h3>Flash-Drive</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=ram">
-                        <img src="images/ram.png" alt="ram">
-                        <h3>Ram</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=hard_disk">
-                        <img src="images/hard-disk-drive.png" alt="hard_disk">
-                        <h3>HardDisk</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=speaker">
-                        <img src="images/speaker.png" alt="speaker">
-                        <h3>Speaker</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=webcam">
-                        <img src="images/webcam.png" alt="webcam">
-                        <h3>WebCam</h3>
-                     </a>
-                  </div>
-                  <div class="item">
-                     <a href="category.php?category=headphone">
-                        <img src="images/headphones.png" alt="headphone">
-                        <h3>Headphones</h3>
-                     </a>
-                  </div>
-               </div>
+                <div class="swiper-wrapper">
 
-               <div class="MS-controls">
-                  <button class="MS-left" aria-label="previous">&#10094;</button>
-                  <button class="MS-right" aria-label="next">&#10095;</button>
-               </div>
+                <?php
+                $select_products = $conn->prepare("SELECT * FROM `advertise` LIMIT 6");
+                $select_products->execute();
+                if ($select_products->rowCount() > 0) {
+                    while ($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+
+                <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
+                        </div>
+
+                        <div class="content">
+                            <div class="description"><?= $fetch_product['description']; ?></div>
+                            <br>
+                            <div class="details"><?= $fetch_product['details']; ?></div>
+                        </div>
+
+
+                </div>  
+
+                    <?php
+                    }
+                    } else {
+                    echo '<p class="empty">no products added yet!</p>';
+                    }
+                    ?>
+                </div>   
 
             </div>
-         </div>
-      </div>
+            </div>
+            <div class="flex-direction-nav">
+                <li class="flex-nav-prev"><a class="flex-prev" href="#" aria-label="Previous">&#10094;</a></li>
+                <li class="flex-nav-next"><a class="flex-next" href="#" aria-label="Next">&#10095;</a></li>     
+            </div>
+        
+        </section>
+    </div>
+    <div class="swiper-pagination"></div>
 
-   </section>
-
-
-
-   <section class="home-products">
-
-      <h1 class="heading">latest products</h1>
-
-      <div class="swiper products-slider">
-
-         <div class="swiper-wrapper">
-
-            <?php
-            $select_products = $conn->prepare("SELECT * FROM `products` LIMIT 6");
-            $select_products->execute();
-            if ($select_products->rowCount() > 0) {
-               while ($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)) {
-            ?>
-                  <form action="" method="post" class="swiper-slide slide">
-                     <input type="hidden" name="pid" value="<?= $fetch_product['id']; ?>">
-                     <input type="hidden" name="name" value="<?= $fetch_product['name']; ?>">
-                     <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
-                     <input type="hidden" name="image" value="<?= $fetch_product['image_01']; ?>">
-                     <button class="fas fa-heart" type="submit" name="add_to_wishlist"></button>
-                     <a href="quick_view.php?pid=<?= $fetch_product['id']; ?>" class="fas fa-eye"></a>
-                     <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
-                     <div class="name"><?= $fetch_product['name']; ?></div>
-                     <div class="flex">
-                        <div class="price"><span>$</span><?= $fetch_product['price']; ?><span>/-</span></div>
-                        <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
-                     </div>
-                     <input type="submit" value="add to cart" class="btn" name="add_to_cart">
-                  </form>
-            <?php
-               }
-            } else {
-               echo '<p class="empty">no products added yet!</p>';
-            }
-            ?>
-
-         </div>
-
-         <div class="swiper-pagination"></div>
-
-      </div>
-
-   </section>
 
 
    <?php include 'components/footer.php'; ?>
@@ -347,9 +259,9 @@ include 'components/wishlist_cart.php';
    `;
          document.head.appendChild(style);
       })();
-   </script>
+   
 
-   <script>
+
       // mixedSlider controller: scroll MS-content by item width
       (function() {
          const slider = document.getElementById('mixedSlider');
@@ -395,8 +307,3 @@ include 'components/wishlist_cart.php';
 </body>
 
 </html>
-
-
-
-
-<h1>check</h1>
