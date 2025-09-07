@@ -135,18 +135,19 @@ if(isset($_POST['submit'])){
 
 <?php include '../components/admin_header.php'; ?>
 
-    <?php
-    if(isset($message)){
-        foreach($message as $message){
-            echo '
-            <div class="message">
-                <span>'.$message.'</span>
-                <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-            </div>
-            ';
-        }
-    }
-    ?>
+<!-- <section class="form-container">
+
+   <form action="" method="post">
+      <h3>update profile</h3>
+      <input type="hidden" name="prev_pass" value="?= $fetch_profile['password']; ?>">
+      <input type="text" name="name" value="?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="old_pass" placeholder="enter old password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="new_pass" placeholder="enter new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="confirm_pass" placeholder="confirm new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="update now" class="btn" name="submit">
+   </form>
+
+</section> -->
 <div class="round"></div>
     <div class="round"></div>
     <div class="round"></div>
@@ -180,7 +181,7 @@ if(isset($_POST['submit'])){
                 </div>
             
                 <div class="input-box">
-                        <input type="text" name="new_name" required placeholder="enter your new username" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="text" name="new_name" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-user' ></i>
                 </div>
                 

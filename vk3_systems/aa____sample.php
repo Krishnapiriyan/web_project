@@ -323,74 +323,7 @@
     </div>
         
 </div>
-<!-- *************** -->
-    <nav>
-        <a herf = "#">Home<span></span></a>
-        <a herf = "#">About<span></span></a>
-        <a herf = "#">Services<span></span></a>
-        <a herf = "#">Contact<span></span></a>
-    </nav>
-
-
-
-
-
-    
-    
-    
-    
-    <!-- ****************** -->
-     <style>
-        /* <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>     */
-    /* *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: #000;
-    } */
-
-    nav a{
-        position: relative;
-        color: #333;
-        font-size: 1.1em;
-        text-decoration: none;
-        padding: 6px 20px;
-        transition: 0.5s;
-        
-    }
-
-    nav a:hover{
-        color: #0ef;
-    }   
-
-    nav a span{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        border-radius: 15px;
-        border-bottom: 2px solid #0ef;
-        transform: scale(0) translateY(50px);
-        transition: 0.5s;
-        opacity: 0;
-        
-    }
-
-    nav a:hover span{
-        transform: scale(1) translateY(0px);
-        opacity: 1;
-    }
-
+<style>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     *{
@@ -404,7 +337,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: radial-gradient(ellipse at bottom, #1b2735ff 0%, #090a0f 100%);
+        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     }
 
     .wrapper{
