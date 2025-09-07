@@ -6,8 +6,8 @@
    --red:#e74c3c;
    --black:#444;
    --white:#fff;
-   --light-color:#dcdbdb;
-   --light-bg:transparent;
+   --light-color:#777;
+   --light-bg:#f5f5f5;
    --border:.2rem solid var(--black);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
    --button-color:#ab4100;
@@ -323,14 +323,16 @@ section{
 }
 
 .heading{
+   font-family: 'Times New Roman', serif;
    font-size: 4rem;
    color:var(--black);
    margin-bottom: 2rem;
    text-align: center;
    text-transform: uppercase;
    font-weight: bold;
-  background: linear-gradient(90deg, #2600ff, #7977ff, #ff0404, #ff0303);
+   background: linear-gradient(90deg, #2600ff, #7977ff, #ff0404, #ff0303);
   -webkit-background-clip: text;
+   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -821,8 +823,16 @@ section{
    background: var(--button-hover-color);
    color: #fff;
 }
-
-
+.add-products form{
+   width: 600px;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+}
 
 /* .add-products form .flex{
    display: flex;
