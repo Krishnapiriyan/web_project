@@ -103,6 +103,20 @@ if(isset($_POST['submit'])){
    }
 ?>
 
+
+<!-- <section class="form-container">
+
+   <form action="" method="post">
+      <h3>update profile</h3>
+      <input type="hidden" name="prev_pass" value="?= $fetch_profile['password']; ?>">
+      <input type="text" name="name" value="?= $fetch_profile['name']; ?>" required placeholder="enter your username" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="old_pass" placeholder="enter old password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="new_pass" placeholder="enter new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="confirm_pass" placeholder="confirm new password" maxlength="20"  class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="update now" class="btn" name="submit">
+   </form>
+
+</section> -->
 <div class="round"></div>
 <div class="round"></div>
 <div class="round"></div>
@@ -126,6 +140,7 @@ if(isset($_POST['submit'])){
         <div class="wrapper">
                 <form action="" method="post">
                     <h1>Update profile</h1>
+                    <!-- <p>default username = <span>admin</span><br> & password = <span>111</span></p> -->
 
                 <div class="input-box">
                 <input type="text" name="name" value="<?= htmlspecialchars($prefill_name ?? '', ENT_QUOTES); ?>" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">

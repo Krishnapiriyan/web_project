@@ -103,22 +103,6 @@ if(isset($_POST['update'])){
 
 <?php include '../components/admin_header.php'; ?>
 
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-<div class="round"></div>
-
 <section class="update-product">
 
    <h1 class="heading">update product</h1>

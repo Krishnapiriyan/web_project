@@ -118,6 +118,11 @@ if(isset($_POST['submit'])){
                         <i class='bx bxs-lock-alt' ></i>
                   </div>
 
+                  <!-- <div class="remember-forgot">
+                        <lable><input type="checkbox">Remember Me</lable>
+                        <a href="#">Forgot Password</a>
+                  </div> -->
+
                   <button type="submit" class="btn" name="submit">Register Now</button>
 
                   <div class="register-link">
