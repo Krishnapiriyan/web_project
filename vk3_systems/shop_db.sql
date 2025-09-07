@@ -111,6 +111,18 @@ CREATE TABLE `products` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `advertise`
+--
+
+CREATE TABLE `advertise` (
+  `id` int(100) NOT NULL,
+  `image_01` varchar(255) NOT NULL,
+  `details` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -135,6 +147,20 @@ CREATE TABLE `wishlist` (
   `price` int(100) NOT NULL,
   `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advertise`
+--
+
+CREATE TABLE `advertise` (
+  `id` int(100) NOT NULL,
+  `image_01` varchar(100) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `details` varchar(500) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Indexes for dumped tables
@@ -183,6 +209,12 @@ ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `advertise`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -226,6 +258,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+--
+-- AUTO_INCREMENT for table `wishlist`
+--
+ALTER TABLE `advertise`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
