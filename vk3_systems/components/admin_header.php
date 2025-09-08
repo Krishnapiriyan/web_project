@@ -15,8 +15,9 @@
 
    <section class="flex">
 
-      <a href="../admin/dashboard.php" class="logo">Admin<span>Panel</span></a>
-
+            <a href="../admin/dashboard.php" class="logo">
+               <img src="../new_image/logo.png" alt="Logo" style="height:35px; vertical-align:middle; margin-right:8px;">Admin<span>Site</span>
+            </a>
             <nav class="newnavbar">
                <a href="../admin/dashboard.php">Home<span></span></a>
                <a href="../admin/products.php">Products<span></span></a>

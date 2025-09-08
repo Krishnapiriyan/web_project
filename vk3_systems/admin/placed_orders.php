@@ -57,13 +57,13 @@ if(isset($_GET['delete'])){
       if($select_orders->rowCount() > 0){
          while($fetch_orders = $select_orders->fetch(PDO::FETCH_ASSOC)){
    ?>
-   <div class="box">
+   <div class="newbox">
       <p> placed on : <span><?= $fetch_orders['placed_on']; ?></span> </p>
       <p> name : <span><?= $fetch_orders['name']; ?></span> </p>
-      <p> number : <span><?= $fetch_orders['number']; ?></span> </p>
+      <p> tp_number : <span><?= $fetch_orders['number']; ?></span> </p>
       <p> address : <span><?= $fetch_orders['address']; ?></span> </p>
       <p> total products : <span><?= $fetch_orders['total_products']; ?></span> </p>
-      <p> total price : <span>$<?= $fetch_orders['total_price']; ?>/-</span> </p>
+      <p> total price : <span>Rs.<?= $fetch_orders['total_price']; ?>/-</span> </p>
       <p> payment method : <span><?= $fetch_orders['method']; ?></span> </p>
       <form action="" method="post">
          <input type="hidden" name="order_id" value="<?= $fetch_orders['id']; ?>">
