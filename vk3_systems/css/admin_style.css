@@ -354,11 +354,7 @@ section{
 .btn:hover,
 .delete-btn:hover,
 .option-btn:hover{
-<<<<<<< HEAD
-   background: linear-gradient(90deg, #009dff, #0c0068b3);
-=======
    background: linear-gradient(90deg, #009dff, #370068b3);
->>>>>>> 1ed85f76c7044745c04e49a38edc1528827e7bfb
 }
 
 .btn{
