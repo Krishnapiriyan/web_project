@@ -13,12 +13,13 @@
    --button-color:#ab4100;
    --button-hover-color:#ab42007b;
    --description-color:#2c5f64;
-   --update-color:#050343;
-   --delete-color:#ff0000;
-   --update-hover-color:#050343ab;
-   --delete-hover-color:#ff000069;
+   --update-color:#312bd7be;
+   --delete-color: #d73232;
+   --update-hover-color:#171383b8;
+   --delete-hover-color:#c62525ca;
    --add_img_color:#17b5c0;
    --add_img_hover_color:#17b5c082;
+   --new_black :#000;
 }
 
 *{
@@ -341,6 +342,7 @@ section{
 .option-btn{
    display: block;
    width: 100%;
+   height: 40px;
    margin-top: 1rem;
    border-radius: 1rem;
    padding:1rem 3rem;
@@ -358,15 +360,15 @@ section{
 }
 
 .btn{
-   background-color: var(--main-color);
+   background-color: var(--update-color);
 }
 
 .option-btn{
-   background-color: var(--orange);
+   background-color: var(--button-color);
 }
 
 .delete-btn{
-   background-color: var(--red);
+   background-color: var(--delete-color);
 }
 
 .flex-btn{
@@ -640,7 +642,7 @@ section{
 
 .header .flex .newnavbar a{
    position: relative;
-   color: #333;
+   color: #9f9f9f;
    font-size: 20px;
    text-decoration: none;
    padding: 6px 20px;
@@ -684,16 +686,22 @@ section{
 .header .flex .profile{
    position: absolute;
    top:120%; right:2rem;
-   background-color: var(--white);
-   border-radius: .5rem;
-   box-shadow: var(--box-shadow);
-   border:var(--border);
-   padding:2rem;
-   width: 30rem;
-   padding-top: 1.2rem;
    display: none;
    animation:fadeIn .2s linear;
-}
+   padding-top: 1.2rem;
+   padding:20rem;
+   width: 300px;
+   height: 250px;
+   background: #0b1b2e;
+   border: 2px solid rgba(255, 255, 255, 0.7);
+   backdrop-filter: blur(100px);
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+   margin-top: 1rem 0;
+} 
 
 .header .flex .profile.active{
    display: inline-block;
@@ -701,9 +709,26 @@ section{
 
 .header .flex .profile p{
    text-align: center;
-   color:var(--black);
+   color:var(--light-color);
    font-size: 2rem;
    margin-bottom: 1rem;
+}
+
+.header .flex .profile .btn ,
+.header .flex .profile .delete-btn , 
+.header .flex .profile .option-btn{
+   width: 100%;
+   height: 35px;
+   /* background: var(--button-color);
+   border: none;
+   outline: none;
+   border-radius: 15px;
+   box-shadow: 0 0 10px #1d1b1bff;
+   font-size: 15px;
+   font-weight: 600;
+   text-align: center;
+   color: #333; */
+   cursor: pointer;
 }
 
 #menu-btn{
@@ -719,7 +744,7 @@ section{
    align-items: flex-start;
 }
 
-.dashboard .box-container .box{
+/* .dashboard .box-container .box{
    padding:2rem;
    text-align: center;
    border:var(--border);
@@ -744,7 +769,7 @@ section{
    font-size: 1.7rem;
    color:var(--light-color);
    margin:1rem 0;
-}
+} */
 
 .dashboard .heading{
    font-family: 'Times New Roman', serif;
@@ -948,7 +973,7 @@ section{
    align-items: flex-start;
 }
 
-.show-products .box-container .box{
+/* .show-products .box-container .box{
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
@@ -961,7 +986,7 @@ section{
    height: 20rem;
    object-fit: contain;
    margin-bottom: 1.5rem;
-}
+} */
 
 .show-products .box-container .newbox .name{
    font-size: 2rem;
@@ -1027,7 +1052,7 @@ section{
 
 .show-products .newbox .option-btn{
    width: 100%;
-   height: 30px;
+   height: 35px;
    background: var(--update-color);
    border: none;
    outline: none;
@@ -1035,13 +1060,13 @@ section{
    box-shadow: 0 0 10px #1d1b1bff;
    font-size: 16px;
    font-weight: 600;
-   color: #333;
+   color: var(--new_black);
    cursor: pointer;
 }
 
 .show-products .newbox .delete-btn{
    width: 100%;
-   height: 30px;
+   height: 35px;
    background: var(--delete-color);
    border: none;
    outline: none;
@@ -1049,7 +1074,7 @@ section{
    box-shadow: 0 0 10px #1d1b1bff;
    font-size: 16px;
    font-weight: 600;
-   color: #333;
+   color: var(--new_black);
    cursor: pointer;
 }
 
@@ -1226,26 +1251,7 @@ section{
    gap:1.5rem;
    align-items: flex-start;
    justify-content: center;
-}
-
-.orders .box-container .box{
-   padding:2rem;
-   padding-top: 1rem;
-   border-radius: .5rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-}
-
-.orders .box-container .box p{
-   line-height: 1.5;
-   font-size: 2rem;
-   color:var(--light-color);
-   margin:1rem 0;
-}
-
-.orders .box-container .box p span{
-   color:var(--main-color);
+   justify-items: center;
 }
 
 .orders .box-container .select{
@@ -1265,27 +1271,119 @@ section{
    gap:1.5rem;
    align-items: flex-start;
    justify-content: center;
+   
+}
+ 
+.orders .box-container .newbox{
+   width: 600px;
+   height: auto;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+   margin-top: 1rem 0;
+
 }
 
-.accounts .box-container .box{
-   padding:2rem;
-   padding-top: .5rem;
-   border-radius: .5rem;
-   text-align: center;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-}
-
-.accounts .box-container .box p{
+.orders .box-container .newbox p{
    font-size: 2rem;
    color:var(--light-color);
-   margin: 1rem 0;
+   margin:1rem 0;
+   font-family: Courier, monospace;
 }
 
-.accounts .box-container .box p span{
-   color:var(--main-color);
+.orders .box-container .newbox p span{
+   font-size: 2rem;
+   color:var(--orange);
 }
+
+
+.accounts .box-container .newbox{
+   width: 300px;
+   height: 250px;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+   margin-top: 1rem 0;
+}
+.accounts .box-container .newbox p{
+   font-size: 2rem;
+   color:var(--light-color);
+   margin:1rem 0;
+   font-family: Courier, monospace;
+}
+.accounts .box-container .newbox p span{
+   font-size: 2rem;
+   color:var(--orange);
+}
+
+.accounts .box-container .newbox .btn{
+   width: 100%;
+   height: 35px;
+   background: var(--button-color);
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   box-shadow: 0 0 10px #1d1b1bff;
+   font-size: 16px;
+   font-weight: 600;
+   color: #333;
+   cursor: pointer;
+}
+
+.accounts .box-container .newbox .btn:hover{
+   background: var(--button-hover-color);
+   color: #fff;
+}
+   
+
+.accounts .box-container .newbox .option-btn{
+   width: 100%;
+   height: 35px;
+   background: var(--update-color);
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   box-shadow: 0 0 10px #1d1b1bff;
+   font-size: 16px;
+   font-weight: 600;
+   color: var(--new_black);
+   cursor: pointer;
+   margin-top: 1rem;
+}
+.accounts .box-container .newbox .option-btn:hover{
+   background: var(--update-hover-color);
+   color: #fff;
+}
+
+.accounts .box-container .newbox .delete-btn{
+   width: 100%;
+   height: 35px;
+   background: var(--delete-color);
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   box-shadow: 0 0 10px #1d1b1bff;
+   font-size: 16px;
+   font-weight: 600;
+   color: var(--new_black);
+   cursor: pointer;
+   margin-top: 1rem;
+}
+.accounts .box-container .newbox .delete-btn:hover{
+   background: var(--delete-hover-color);
+   color: #fff;
+}
+
 
 .contacts .box-container{
    display: grid;
@@ -1293,26 +1391,33 @@ section{
    gap:1.5rem;
    align-items: flex-start;
    justify-content: center;
+   justify-items: center;
 }
 
-.contacts .box-container .box{
-   padding:2rem;
-   padding-top: 1rem;
-   border-radius: .5rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
+.contacts .box-container .newbox{
+   width: 450px;
+   height: auto;
+   background: transparent;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(20px);
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+   margin-top: 1rem 0;
 }
 
-.contacts .box-container .box p{
-   line-height: 1.5;
+.contacts .box-container .newbox p{
    font-size: 2rem;
    color:var(--light-color);
    margin:1rem 0;
+   font-family: Courier, monospace;
 }
 
-.contacts .box-container .box p span{
-   color:var(--main-color);
+.contacts .box-container .newbox p span{
+   font-size: 2rem;
+   color:var(--orange);
 }
 
 

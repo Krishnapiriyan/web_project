@@ -88,7 +88,7 @@ CREATE TABLE `orders` (
   `address` varchar(500) NOT NULL,
   `total_products` varchar(1000) NOT NULL,
   `total_price` int(100) NOT NULL,
-  `placed_on` date NOT NULL DEFAULT current_timestamp(),
+  `placed_on` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
   `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -106,18 +106,6 @@ CREATE TABLE `products` (
   `image_01` varchar(100) NOT NULL,
   `image_02` varchar(100) NOT NULL,
   `image_03` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `advertise`
---
-
-CREATE TABLE `advertise` (
-  `id` int(100) NOT NULL,
-  `image_01` varchar(255) NOT NULL,
-  `details` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -158,7 +146,7 @@ CREATE TABLE `advertise` (
   `id` int(100) NOT NULL,
   `image_01` varchar(100) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `details` varchar(500) NOT NULL,
+  `details` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
@@ -209,7 +197,7 @@ ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Indexes for table `advertise`
 --
 ALTER TABLE `advertise`
   ADD PRIMARY KEY (`id`);
@@ -259,10 +247,9 @@ ALTER TABLE `users`
 --
 ALTER TABLE `wishlist`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
-COMMIT;
 
 --
--- AUTO_INCREMENT for table `wishlist`
+-- AUTO_INCREMENT for table `advertise`
 --
 ALTER TABLE `advertise`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;

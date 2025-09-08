@@ -50,9 +50,9 @@ if(!isset($admin_id)){
 
          <div class="box-container">
             <div class="newbox">
-               <h3>welcome!</h3>
+               <h3>Welcome!</h3>
                <p><?= $fetch_profile['name']; ?></p>
-               <a href="newupdate_profile.php" class="btn">update profile</a>
+               <a href="newupdate_profile.php" class="btn">Update profile</a>
             </div>
 
             <div class="newbox">
@@ -66,9 +66,9 @@ if(!isset($admin_id)){
                      }
                   }
                ?>
-               <h2>total pendings</h2>
+               <h2>Total pendings</h2>
                <p><span>Rs.</span><?= $total_pendings; ?><span>/-</span></p>
-               <a href="placed_orders.php" class="btn">see orders</a>
+               <a href="placed_orders.php" class="btn">See orders</a>
             </div>
 
             <div class="newbox">
@@ -82,9 +82,9 @@ if(!isset($admin_id)){
                      }
                   }
                ?>
-               <h2>completed orders</h2>
+               <h2>Completed orders</h2>
                <p><span>Rs.</span><?= $total_completes; ?><span>/-</span></p>
-               <a href="placed_orders.php" class="btn">see orders</a>
+               <a href="placed_orders.php" class="btn">See orders</a>
             </div>
 
             <div class="newbox">
@@ -93,9 +93,9 @@ if(!isset($admin_id)){
                   $select_orders->execute();
                   $number_of_orders = $select_orders->rowCount()
                ?>
-               <h2>orders placed</h2>
+               <h2>Orders placed</h2>
                <p><?= $number_of_orders; ?></p>
-               <a href="placed_orders.php" class="btn">see orders</a>
+               <a href="placed_orders.php" class="btn">See orders</a>
             </div>
 
             <div class="newbox">
@@ -104,9 +104,9 @@ if(!isset($admin_id)){
                   $select_products->execute();
                   $number_of_products = $select_products->rowCount()
                ?>
-               <h2>products added</h2>
+               <h2>Products added</h2>
                <p><?= $number_of_products; ?></p>
-               <a href="products.php" class="btn">see products</a>
+               <a href="products.php" class="btn">See products</a>
             </div>
 
             <div class="newbox">
@@ -115,9 +115,9 @@ if(!isset($admin_id)){
                   $select_users->execute();
                   $number_of_users = $select_users->rowCount()
                ?>
-               <h2>normal users</h2>
+               <h2>Normal users</h2>
                <p><?= $number_of_users; ?></p>
-               <a href="users_accounts.php" class="btn">see users</a>
+               <a href="users_accounts.php" class="btn">See users</a>
             </div>
 
             <div class="newbox">
@@ -126,9 +126,9 @@ if(!isset($admin_id)){
                   $select_admins->execute();
                   $number_of_admins = $select_admins->rowCount()
                ?>
-               <h2>admin users</h2>
+               <h2>Admin users</h2>
                <p><?= $number_of_admins; ?></p>
-               <a href="admin_accounts.php" class="btn">see admins</a>
+               <a href="admin_accounts.php" class="btn">See admins</a>
             </div>
 
             <div class="newbox">
@@ -137,9 +137,9 @@ if(!isset($admin_id)){
                   $select_messages->execute();
                   $number_of_messages = $select_messages->rowCount()
                ?>
-               <h2>new messages</h2>
+               <h2>New messages</h2>
                <p><?= $number_of_messages; ?></p>
-               <a href="messages.php" class="btn">see messages</a>
+               <a href="messages.php" class="btn">See messages</a>
             </div>
 
             <div class="newbox">
@@ -148,7 +148,7 @@ if(!isset($admin_id)){
                   $select_messages->execute();
                   $number_of_messages = $select_messages->rowCount()
                ?>
-               <h2>manage userpage</h2>
+               <h2>Manage userpage</h2>
                <p>maximum add 6 items</p>
                <a href="advertise_slides.php" class="btn">Add more</a>
             </div>

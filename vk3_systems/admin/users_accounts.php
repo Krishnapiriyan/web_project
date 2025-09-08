@@ -56,7 +56,7 @@ if(isset($_GET['delete'])){
       if($select_accounts->rowCount() > 0){
          while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
    ?>
-   <div class="box">
+   <div class="newbox">
       <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
       <p> username : <span><?= $fetch_accounts['name']; ?></span> </p>
       <p> email : <span><?= $fetch_accounts['email']; ?></span> </p>

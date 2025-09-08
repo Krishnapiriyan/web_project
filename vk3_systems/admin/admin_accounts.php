@@ -42,28 +42,31 @@ if(isset($_GET['delete'])){
 
    <div class="box-container">
 
-   <div class="box">
-      <p>add new admin</p>
-      <a href="register_admin.php" class="option-btn">register admin</a>
-   </div>
-
-   <?php
-      $select_accounts = $conn->prepare("SELECT * FROM `admins`");
-      $select_accounts->execute();
-      if($select_accounts->rowCount() > 0){
-         while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
-   ?>
-   <div class="box">
-      <p> admin id : <span><?= $fetch_accounts['id']; ?></span> </p>
-      <p> admin name : <span><?= $fetch_accounts['name']; ?></span> </p>
-      <div class="flex-btn">
-         <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" onclick="return confirm('delete this account?')" class="delete-btn">delete</a>
-         <?php
-            if($fetch_accounts['id'] == $admin_id){
-               echo '<a href="update_profile.php" class="option-btn">update</a>';
-            }
-         ?>
+      <div class="newbox">
+         <p>add new admin</p>
+         <a href="register_admin.php" class="btn">register admin</a>
       </div>
+
+      <?php
+         $select_accounts = $conn->prepare("SELECT * FROM `admins`");
+         $select_accounts->execute();
+         if($select_accounts->rowCount() > 0){
+            while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
+      ?>
+      <div class="newbox">
+         <p> admin id : <span><?= $fetch_accounts['id']; ?></span> </p>
+         <p> admin name : <span><?= $fetch_accounts['name']; ?></span> </p>
+         <p> admin tp_num : <span><?= $fetch_accounts['tp_num']; ?></span> </p>
+         <div class="flex-btn">
+            <?php
+               if($fetch_accounts['id'] == $admin_id){
+                  echo '<a href="newupdate_profile.php" class="option-btn">update</a>';
+               }
+            ?>
+
+            <a href="admin_accounts.php?delete=<?= $fetch_accounts['id']; ?>" onclick="return confirm('delete this account?')" class="delete-btn">delete</a>
+            
+         </div>
    </div>
    <?php
          }

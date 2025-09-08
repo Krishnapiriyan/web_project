@@ -61,12 +61,254 @@ html{
 }
 
 body{
-   background : url(../background-home.jpg);
+   /* background : url(../background-home.jpg);
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
+   background-attachment: fixed; */
+
+   background: radial-gradient(ellipse at bottom, #1b352c 0%, #090a0f 100%);
+   overflow: auto; /* allow page scrolling */
+   -webkit-overflow-scrolling: touch;
+   min-height: 100vh;
 }
+.round{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgba(212, 193, 193, 0.9);
+        filter:drop-shadow(0 0 15px #fff);
+        /* animation: animate 10s linear infinite ; */
+    }
+    .round:nth-child(1){
+        opacity: 0.6;
+        transform: translate(56vw, -10px);
+        animation: ani-1 22s -16s linear infinite;
+
+    }
+    @keyframes ani-1{
+        34%{
+            transform: translate(57vw, 34vh);
+        }
+        to{
+            transform: translate(57vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(2){
+        opacity: 0.06;
+        transform: translate(38vw, -10px);
+        animation: ani-2 17s -20s linear infinite;
+
+    }
+    @keyframes ani-2{
+        70%{
+            transform: translate(37vw, 70vh);
+        }
+        to{
+            transform: translate(37vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(3){
+        opacity: 0.7;
+        transform: translate(18vw, -10px);
+        animation: ani-3 10s -24s linear infinite;
+
+    }
+    @keyframes ani-3{
+        71%{
+            transform: translate(22vw, 71vh);
+        }
+        to{
+            transform: translate(20vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(4){
+        opacity: 0.7;
+        transform: translate(59vw, -10px);
+        animation: ani-4 25s -3s linear infinite;
+
+    }
+    @keyframes ani-4{
+        73%{
+            transform: translate(51vw, 73vh);
+        }
+        to{
+            transform: translate(55vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(5){
+        opacity: 0.4;
+        transform: translate(47vw, -10px);
+        animation: ani-5 20s -18s linear infinite;
+
+    }
+    @keyframes ani-5{
+        38%{
+            transform: translate(42vw, 38vh);
+        }
+        to{
+            transform: translate(45vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(6){
+        opacity: 0.6;
+        transform: translate(82vw, -10px);
+        animation: ani-6 16s -19s linear infinite;
+
+    }
+    @keyframes ani-6{
+        57%{
+            transform: translate(83vw, 57vh);
+        }
+        to{
+            transform: translate(82vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(7){
+        opacity: 0.1;
+        transform: translate(30vw, -10px);
+        animation: ani-7 17s -27s linear infinite;
+
+    }
+    @keyframes ani-7{
+        32%{
+            transform: translate(22vw, 32vh);
+        }
+        to{
+            transform: translate(26vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(8){
+        opacity: 0.5;
+        transform: translate(11vw, -10px);
+        animation: ani-8 10s -19s linear infinite;
+
+    }
+    @keyframes ani-8{
+        50%{
+            transform: translate(6vw, 50vh);
+        }
+        to{
+            transform: translate(9vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(9){
+        opacity: 0.5;
+        transform: translate(81vw, -10px);
+        animation: ani-9 13s -8s linear infinite;
+
+    }       
+    @keyframes ani-9{
+        57%{
+            transform: translate(74vw, 57vh);
+        }
+        to{
+            transform: translate(77vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(10){
+        opacity: 0.7;
+        /* transform: translate(91vw, -10px); */
+        animation: ani-10 24s -25s linear infinite;
+
+    }
+    @keyframes ani-10{
+        51%{
+            transform: translate(31vw, 51vh);
+        }
+        to{
+            transform: translate(28vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(11){
+        opacity: 0.5;
+        transform: translate(92vw, -10px);
+        animation: ani-11 27s -18s linear infinite;
+
+    }
+    @keyframes ani-11{
+        36%{
+            transform: translate(99vw, 36vh);
+        }
+        to{
+            transform: translate(96vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(12){
+        opacity: 0.9;
+        transform: translate(49vw, -10px);
+        animation: ani-12 16s -10s linear infinite;
+
+    }
+    @keyframes ani-12{
+        78%{
+            transform: translate(74vw, 78vh);
+        }
+        to{
+            transform: translate(51vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(13){
+        opacity: 0.3;
+        transform: translate(69vw, -10px);
+        animation: ani-13 11s -27s linear infinite;
+
+    }
+    @keyframes ani-13{
+        75%{
+            transform: translate(66vw, 75vh);
+        }
+        to{
+            transform: translate(68vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(14){
+        opacity: 0.2;
+        transform: translate(78vw, -10px);
+        animation: ani-14 18s -4s linear infinite;
+
+    }
+    @keyframes ani-14{
+        50%{
+            transform: translate(77vw, 50vh);
+        }
+        to{
+            transform: translate(77vw, 100vh);
+        }
+     
+    }
+    .round:nth-child(15){
+        opacity: 0.9;
+        transform: translate(33vw, -10px);
+        animation: ani-15 18s -4s linear infinite;
+
+    }
+    @keyframes ani-15{
+        68%{
+            transform: translate(29vw, 68vh);
+        }
+        to{
+            transform: translate(31vw, 100vh);
+        }
+
+
+        /*  */
+     
+    }
 
 section{
    padding:1.5rem;
@@ -182,10 +424,12 @@ section{
 .header{
    position: sticky;
    top:0; left:0; right:0;
-   background-color: transparent;
-   backdrop-filter: blur(100px);
+   /* background-color: transparent;
+   backdrop-filter: blur(100px); */
+   background: #000;
    box-shadow: var(--box-shadow);
    z-index: 1000;
+   backdrop-filter: blur(20px);
 }
 
 .header .flex{
@@ -193,10 +437,10 @@ section{
    align-items: center;
    justify-content: space-between;
    position: relative;
-   left:0; right:0;
+   /* left:0; right:0; */
    /* padding:1.5rem 1.5rem; */
    /* max-width: 1200px; */
-   margin: 0 auto;
+   /* margin: 0 auto; */
    
 }
 
@@ -219,6 +463,107 @@ header .flex .gif-video {
 .header .flex .logo span{
    color:var(--main-color);
 } */
+
+.header .flex .newnavbar{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header .flex .newnavbar a{
+   position: relative;
+   color: #9f9f9f;
+   font-size: 20px;
+   text-decoration: none;
+   padding: 6px 20px;
+   transition: 0.5s;
+}
+
+.header .flex .newnavbar a:hover{
+   color: #0ef;
+}
+
+.header .flex .newnavbar a span{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   border-radius: 15px;
+   border-bottom: 2px solid #0ef;
+   transform: scale(0) translateY(50px);
+   transition: 0.5s;
+   opacity: 0;
+}  
+
+.header .flex .newnavbar a:hover span{
+   transform: scale(1) translateY(0);
+   opacity: 1;
+}  
+
+.header .flex .icons div{
+   margin-left: 1.7rem;
+   font-size: 2.5rem;
+   cursor: pointer;
+   color:var(--black);
+}
+
+.header .flex .icons div:hover{
+   color:var(--main-color);
+}
+
+.header .flex .profile{
+   position: absolute;
+   top:120%; right:2rem;
+   display: none;
+   animation:fadeIn .2s linear;
+   padding-top: 1.2rem;
+   padding:20rem;
+   width: 300px;
+   height: 250px;
+   background: #0b1b2e;
+   border: 2px solid rgba(255, 255, 255, 0.7);
+   backdrop-filter: blur(100px);
+   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+   color: #fff;
+   border-radius: 10px;
+   padding: 30px 30px;
+   margin-top: 1rem 0;
+} 
+
+.header .flex .profile.active{
+   display: inline-block;
+}
+
+.header .flex .profile p{
+   text-align: center;
+   color:var(--light-color);
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+.header .flex .profile .btn ,
+.header .flex .profile .delete-btn , 
+.header .flex .profile .option-btn{
+   width: 100%;
+   height: 35px;
+   /* background: var(--button-color);
+   border: none;
+   outline: none;
+   border-radius: 15px;
+   box-shadow: 0 0 10px #1d1b1bff;
+   font-size: 15px;
+   font-weight: 600;
+   text-align: center;
+   color: #333; */
+   cursor: pointer;
+}
+
+#menu-btn{
+   display: none;
+}
 
 .header .flex .navbar a{
    margin:0 1rem;
