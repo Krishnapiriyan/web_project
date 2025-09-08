@@ -157,6 +157,12 @@ include 'components/wishlist_cart.php';
                      </a>
                   </div>
                   <div class="item">
+                     <a href="category.php?category=printer">
+                        <img src="images/printer.png" alt="printer">
+                        <h3>Printer</h3>
+                     </a>
+                  </div>
+                  <div class="item">
                      <a href="category.php?category=processor">
                         <img src="images/processor.png" alt="processor">
                         <h3>Processor</h3>
@@ -170,7 +176,7 @@ include 'components/wishlist_cart.php';
                   </div>
                   <div class="item">
                      <a href="category.php?category=flash_drive">
-                        <img src="images/flash-drive.png" alt="flash_drive">
+                        <img src="images/pendrive.png" alt="flash_drive">
                         <h3>Flash-Drive</h3>
                      </a>
                   </div>
@@ -202,6 +208,12 @@ include 'components/wishlist_cart.php';
                      <a href="category.php?category=headphone">
                         <img src="images/headphones.png" alt="headphone">
                         <h3>Headphones</h3>
+                     </a>
+                  </div>
+                  <div class="item">
+                     <a href="category.php?category=other">
+                        <img src="images/other.png" alt="others">
+                        <h3>Other</h3>
                      </a>
                   </div>
                </div>
