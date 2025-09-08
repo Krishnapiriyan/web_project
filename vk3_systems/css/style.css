@@ -405,6 +405,7 @@ section{
    border-radius: .5rem;
    font-size: 2rem;
    text-transform: capitalize;
+   margin: 0 auto;
 }
 
 .disabled{

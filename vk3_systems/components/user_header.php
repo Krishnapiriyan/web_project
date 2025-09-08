@@ -24,11 +24,11 @@
       <!-- <a href="home.php" class="logo">Shopie<span>.</span></a> -->
 
       <nav class="newnavbar">
-         <a href="home.php">home<span></span></a>
-         <a href="about.php">about<span></span></a>
-         <a href="orders.php">orders<span></span></a>
-         <a href="shop.php">shop<span></span></a>
-         <a href="contact.php"><span></span>contact</a>
+         <a href="home.php">Home<span></span></a>
+         <a href="about.php">About<span></span></a>
+         <a href="orders.php">Orders<span></span></a>
+         <a href="shop.php">Shop<span></span></a>
+         <a href="contact.php"><span></span>Contact us</a>
       </nav>
 
       <div class="icons">

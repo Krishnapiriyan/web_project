@@ -107,21 +107,21 @@ if(isset($_POST['submit'])){
                   <input type="hidden" name="prev_pass" value="<?= $fetch_profile['password']; ?>">
 
                   <div class="input-box">
-                     <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
+                     <input type="text" name="name" value="<?= $fetch_profile['name']; ?>" required placeholder="Enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
                   </div>
 
                   <div class="input-box">
-                        <input type="password" name="old_pass" placeholder="enter old password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="password" name="old_pass" placeholder="Enter old password" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-lock-alt' ></i>
                   </div>
 
                   <div class="input-box">
-                        <input type="password" name="new_pass" placeholder="enter new password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="password" name="new_pass" placeholder="Enter new password" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-lock-alt' ></i>
                   </div>
 
                   <div class="input-box">
-                        <input type="password" name="confirm_pass" placeholder="confirm new password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="password" name="confirm_pass" placeholder="Confirm new password" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-lock-alt' ></i>
                   </div>
 
