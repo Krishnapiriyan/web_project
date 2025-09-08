@@ -694,11 +694,11 @@ header .flex .gif-video {
    display: flex;
    gap: 1.2rem;
    overflow-x: auto;
-   padding: 2rem 5rem;
+   padding: 5rem 5rem;
    scroll-behavior: smooth;
    -webkit-overflow-scrolling: touch;
    scroll-snap-type: x proximity;
-   background: var(--light-color);
+   background: transparent;
    background-size: cover;
 }
 
@@ -707,7 +707,7 @@ header .flex .gif-video {
 }
 
 #mixedSlider .MS-content::-webkit-scrollbar-thumb {
-   background:rgb(50, 50, 50);
+   background:rgba(120, 119, 119, 0.6);
    border-radius: 8px;
 }
 
@@ -735,6 +735,7 @@ header .flex .gif-video {
 .MS-content .item img:hover{
    background-color:var(--white);
    transform: translateY(-15px);
+   box-shadow: 0 0 20px var(--nav-icon-hover-color), 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .MS-content .item a > *:last-child{
@@ -767,7 +768,7 @@ header .flex .gif-video {
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   background: rgba(0,0,0,0.6);
+   background: rgba(120, 119, 119, 0.6);
    color: #fff;
    border-radius: 50%;
    border: 0;
@@ -793,6 +794,14 @@ header .flex .gif-video {
    .MS-content .item{ width: 110px; padding:10px; }
    .MS-content .item img{ width:64px; height:64px; }
    .MS-controls{ display:none; }
+}
+
+.MS-content .item img {
+   background: rgba(255,255,255,0.6);
+   backdrop-filter: blur(6px);
+   padding: 14px;
+   border-radius: 12px;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 
