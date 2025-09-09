@@ -377,46 +377,37 @@ include 'components/wishlist_cart.php';
    </script>
 
    <script>
-      // mixedSlider controller: scroll MS-content by item width
-      (function() {
-         const slider = document.getElementById('mixedSlider');
-         if (!slider) return;
-         const content = slider.querySelector('.MS-content');
-         const left = slider.querySelector('.MS-left');
-         const right = slider.querySelector('.MS-right');
+            (function() {
+  const slider = document.getElementById('mixedSlider');
+  if (!slider) return;
 
-         function scrollBy(dir) {
-            const item = content.querySelector('.item');
-            if (!item) return;
-            const itemW = item.getBoundingClientRect().width + parseFloat(getComputedStyle(content).gap || 8);
-            content.scrollBy({
-               left: dir * itemW,
-               behavior: 'smooth'
-            });
-         }
-         left && left.addEventListener('click', () => scrollBy(-1));
-         right && right.addEventListener('click', () => scrollBy(1));
+  const content = slider.querySelector('.MS-content');
+  const items = Array.from(content.querySelectorAll('.item'));
+  const leftBtn = slider.querySelector('.MS-left');
+  const rightBtn = slider.querySelector('.MS-right');
 
-         // touch drag support
-         let isDown = false,
-            startX, scrollLeft;
-         content.addEventListener('pointerdown', (e) => {
-            isDown = true;
-            content.setPointerCapture(e.pointerId);
-            startX = e.clientX;
-            scrollLeft = content.scrollLeft;
-         });
-         content.addEventListener('pointerup', (e) => {
-            isDown = false;
-            content.releasePointerCapture(e.pointerId);
-         });
-         content.addEventListener('pointermove', (e) => {
-            if (!isDown) return;
-            const x = e.clientX;
-            const walk = (startX - x);
-            content.scrollLeft = scrollLeft + walk;
-         });
-      })();
+  if (!content || items.length === 0) return;
+
+  let index = 0;
+
+  function update() {
+    const itemWidth = items[0].getBoundingClientRect().width + 16; // 16 = gap
+    content.style.transform = `translateX(${-index * itemWidth}px)`;
+  }
+
+  leftBtn && leftBtn.addEventListener('click', () => {
+    index = Math.max(index - 1, 0);
+    update();
+  });
+
+  rightBtn && rightBtn.addEventListener('click', () => {
+    index = Math.min(index + 1, items.length - 1);
+    update();
+  });
+
+  // Clickable items (default <a> works naturally)
+})();
+
    </script>
 
 </body>

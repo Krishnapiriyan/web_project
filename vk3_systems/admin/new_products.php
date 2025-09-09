@@ -16,10 +16,14 @@ if(isset($_POST['add_product'])){
    $name = filter_var($name, FILTER_SANITIZE_STRING);
    $price = $_POST['price'];
    $price = filter_var($price, FILTER_SANITIZE_STRING);
+
+   $category =$_POST['category'];
+   $category = filter_var($category, FILTER_SANITIZE_STRING);
+
    $details = $_POST['details'];
    $details = filter_var($details, FILTER_SANITIZE_STRING);
 
-   $image_01 = $_FILES['image_01']['name'];
+   $image_01 = $_FILES['image_01']['name'];      
    $image_01 = filter_var($image_01, FILTER_SANITIZE_STRING);
    $image_size_01 = $_FILES['image_01']['size'];
    $image_tmp_name_01 = $_FILES['image_01']['tmp_name'];
@@ -44,8 +48,8 @@ if(isset($_POST['add_product'])){
       $message[] = 'product name already exist!';
    }else{
 
-      $insert_products = $conn->prepare("INSERT INTO `products`(name, details, price, image_01, image_02, image_03) VALUES(?,?,?,?,?,?)");
-      $insert_products->execute([$name, $details, $price, $image_01, $image_02, $image_03]);
+      $insert_products = $conn->prepare("INSERT INTO `products`(name, details, price, image_01, image_02, image_03, category) VALUES(?,?,?,?,?,?,?)");
+      $insert_products->execute([$name, $details, $price, $image_01, $image_02, $image_03, $category]);
 
       if($insert_products){
          if($image_size_01 > 20000000 OR $image_size_02 > 20000000 OR $image_size_03 > 20000000){
@@ -78,7 +82,7 @@ if(isset($_GET['delete'])){
    $delete_cart->execute([$delete_id]);
    $delete_wishlist = $conn->prepare("DELETE FROM `wishlist` WHERE pid = ?");
    $delete_wishlist->execute([$delete_id]);
-   header('location:products.php');
+   header('location:new_products.php');
 }
 
 
@@ -131,25 +135,50 @@ if(isset($_GET['delete'])){
                   <span>Product price (required)</span>
                   <input type="number" min="0" class="box" required max="9999999999" placeholder="Enter product price" onkeypress="if(this.value.length == 10) return false;" name="price">
                </div>
-            <div class="inputBox">
-                  <span>Image 01 (required)</span>
-                  <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-            </div>
-            <div class="inputBox">
-                  <span>Image 02 (required)</span>
-                  <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-            </div>
-            <div class="inputBox">
-                  <span>Image 03 (required)</span>
-                  <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
-            </div>
+
                <div class="inputBox">
-                  <span>Product details (required)</span>
-                  <textarea name="details" placeholder="Enter product details" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+                  <span>Product category (required)</span>
+                  <select name="category" class="select" required>
+                     <option value="" selected disabled>Select category</option>
+                     <option value="laptop">laptop</option>
+                     <option value="monitor">monitor</option>
+                     <option value="keyboard">keyboard</option>
+                     <option value="mouse">mouse</option>
+                     <option value="printer">printer</option>
+                     <option value="processor">processor</option>
+                     <option value="graphic_card">graphic_card</option>
+                     <option value="flash_drive">flash_drive</option>
+                     <option value="ram">ram</option>
+                     <option value="hard_disk">hard_disk</option>
+                     <option value="speaker">speaker</option>
+                     <option value="webcam">webcam</option>
+                     <option value="headphone">headphone</option>
+                     <option value="other">others</option>
+
+                  </select>
                </div>
+   
+               <div class="inputBox">
+                     <span>Image 01 (required)</span>
+                     <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" required>
+               </div>
+               <div class="inputBox">
+                     <span>Image 02 (optional)</span>
+                     <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" >
+               </div>
+               <div class="inputBox">
+                     <span>Image 03 (optinal)</span>
+                     <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box" >
+               </div>
+               <div class="inputBox">
+                     <span>Product details (required)</span>
+                     <textarea name="details" placeholder="Enter product details" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+               </div>
+
+               <input type="submit" value="add product" class="btn" name="add_product">
+
             </div>
-            
-            <input type="submit" value="add product" class="btn" name="add_product">
+         
          </form>
       </div>
    </section>
@@ -170,10 +199,11 @@ if(isset($_GET['delete'])){
          <img src="../uploaded_img/<?= $fetch_products['image_01']; ?>" alt="">
          <div class="name"><?= $fetch_products['name']; ?></div>
          <div class="price">Rs.<span><?= $fetch_products['price']; ?></span>/-</div>
+         <div class="category"><span><?= $fetch_products['category']; ?></span></div>
          <div class="details"><span><?= $fetch_products['details']; ?></span></div>
          <div class="flex-btn">
-            <a href="update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
-            <a href="products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
+            <a href="new_update_product.php?update=<?= $fetch_products['id']; ?>" class="option-btn">update</a>
+            <a href="new_products.php?delete=<?= $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
          </div>
       </div>
       <?php

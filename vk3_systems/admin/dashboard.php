@@ -106,7 +106,7 @@ if(!isset($admin_id)){
                ?>
                <h2>Products added</h2>
                <p><?= $number_of_products; ?></p>
-               <a href="products.php" class="btn">See products</a>
+               <a href="new_products.php" class="btn">See products</a>
             </div>
 
             <div class="newbox">

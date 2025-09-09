@@ -33,7 +33,7 @@ if(isset($_POST['update'])){
    $image_folder_01 = '../uploaded_img/'.$image_01;
 
    if(!empty($image_01)){
-      if($image_size_01 > 2000000){
+      if($image_size_01 > 20000000){
          $message[] = 'image size is too large!';
       }else{
          $update_image_01 = $conn->prepare("UPDATE `products` SET image_01 = ? WHERE id = ?");
@@ -52,7 +52,7 @@ if(isset($_POST['update'])){
    $image_folder_02 = '../uploaded_img/'.$image_02;
 
    if(!empty($image_02)){
-      if($image_size_02 > 2000000){
+      if($image_size_02 > 20000000){
          $message[] = 'image size is too large!';
       }else{
          $update_image_02 = $conn->prepare("UPDATE `products` SET image_02 = ? WHERE id = ?");
@@ -71,7 +71,7 @@ if(isset($_POST['update'])){
    $image_folder_03 = '../uploaded_img/'.$image_03;
 
    if(!empty($image_03)){
-      if($image_size_03 > 2000000){
+      if($image_size_03 > 20000000){
          $message[] = 'image size is too large!';
       }else{
          $update_image_03 = $conn->prepare("UPDATE `products` SET image_03 = ? WHERE id = ?");
@@ -153,9 +153,9 @@ if(isset($_POST['update'])){
       <textarea name="details" class="box" required cols="30" rows="10"><?= $fetch_products['details']; ?></textarea>
       <span>update image 01</span>
       <input type="file" name="image_01" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
-      <span>update image 02</span>
+      <span>update image 02(optional)</span>
       <input type="file" name="image_02" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
-      <span>update image 03</span>
+      <span>update image 03(optional)</span>
       <input type="file" name="image_03" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
       <div class="flex-btn">
          <input type="submit" name="update" class="btn" value="update">

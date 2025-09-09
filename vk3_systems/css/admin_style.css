@@ -883,12 +883,14 @@ section{
    margin-top: 1.5rem;
    border:var(--border);
    border-radius: 10px;
-   color: black;
+   color: var(--new_black);
+   cursor: pointer;
 }
 
 .add-products form textarea{
    height: 5.4rem;
    resize: none;
+   color: #000;
 }
 
 .add-products .newflex{
