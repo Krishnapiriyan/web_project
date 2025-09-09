@@ -13,6 +13,7 @@
    --light-color:#666;
    --light-bg:#eee;
    --border:.2rem solid var(--black);
+   --border_grey:.3rem solid var(--scroll-color);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
    --nav-color:#262626;
    --nav-hover-box-color:#000;
@@ -834,9 +835,9 @@ header .flex .gif-video {
 .home-products .slide{
    position: relative;
    padding:2rem;
-   border-radius: .5rem;
+   border-radius: 1rem;
    border:var(--border);
-   background-color: var(--white);
+   background-color: var(--black);
    box-shadow: var(--box-shadow);
    margin-bottom: 5rem;
    overflow: hidden;
@@ -852,7 +853,7 @@ header .flex .gif-video {
 
 .home-products .slide .name{
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .home-products .slide .flex{
@@ -885,11 +886,11 @@ header .flex .gif-video {
    width: 4.5rem;
    line-height: 4.2rem;
    font-size: 2rem;
-   background-color: var(--white);
+   background-color: var(--black);
    border:var(--border);
    border-radius: .5rem;
    text-align: center;
-   color:var(--black);
+   color:#0ef;
    cursor: pointer;
    transition: .2s linear;
 }
@@ -904,8 +905,8 @@ header .flex .gif-video {
 
 .home-products .slide .fa-heart:hover,
 .home-products .slide .fa-eye:hover{
-   background-color: var(--black);
-   color:var(--white);
+   background-color: var(--grey);
+   color:var(--orange);
 }
 
 .home-products .slide:hover .fa-heart{
@@ -919,8 +920,8 @@ header .flex .gif-video {
 .quick-view form{
    padding:2rem;
    border-radius: .5rem;
-   border:var(--border);
-   background-color: var(--white);
+   border:var(--border_grey);
+   background-color: var(--black);
    box-shadow: var(--box-shadow);
    margin-top: 1rem;
 }
@@ -955,7 +956,7 @@ header .flex .gif-video {
    width: 10rem;
    object-fit: contain;
    padding:.5rem;
-   border:var(--border);
+   border:var(--border_grey);
    cursor: pointer;
    transition: .2s linear;
 }
@@ -977,7 +978,7 @@ header .flex .gif-video {
 
 .quick-view form .row .content .name{
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .quick-view form .row .flex{

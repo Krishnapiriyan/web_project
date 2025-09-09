@@ -48,7 +48,7 @@ if(isset($_POST['add_product'])){
       $insert_products->execute([$name, $details, $price, $image_01, $image_02, $image_03]);
 
       if($insert_products){
-         if($image_size_01 > 2000000 OR $image_size_02 > 2000000 OR $image_size_03 > 2000000){
+         if($image_size_01 > 20000000 OR $image_size_02 > 20000000 OR $image_size_03 > 20000000){
             $message[] = 'image size is too large!';
          }else{
             move_uploaded_file($image_tmp_name_01, $image_folder_01);
