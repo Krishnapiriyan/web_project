@@ -105,7 +105,8 @@ CREATE TABLE `products` (
   `price` int(10) NOT NULL,
   `image_01` varchar(100) NOT NULL,
   `image_02` varchar(100) NOT NULL,
-  `image_03` varchar(100) NOT NULL
+  `image_03` varchar(100) NOT NULL,
+  `category` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
