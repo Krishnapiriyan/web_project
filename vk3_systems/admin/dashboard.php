@@ -29,6 +29,8 @@ if(!isset($admin_id)){
 
 <?php include '../components/admin_header.php'; ?>
 
+<div class="bg-image"></div>
+
    <div class="round"></div>
     <div class="round"></div>
     <div class="round"></div>
