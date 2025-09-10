@@ -32,19 +32,19 @@ include 'components/wishlist_cart.php';
    <?php include 'components/user_header.php'; ?>
 
    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
+   <div class="round"></div>
 
    <div class="home-bg">
 
@@ -377,37 +377,36 @@ include 'components/wishlist_cart.php';
    </script>
 
    <script>
-            (function() {
-  const slider = document.getElementById('mixedSlider');
-  if (!slider) return;
+      (function() {
+         const slider = document.getElementById('mixedSlider');
+         if (!slider) return;
 
-  const content = slider.querySelector('.MS-content');
-  const items = Array.from(content.querySelectorAll('.item'));
-  const leftBtn = slider.querySelector('.MS-left');
-  const rightBtn = slider.querySelector('.MS-right');
+         const content = slider.querySelector('.MS-content');
+         const items = Array.from(content.querySelectorAll('.item'));
+         const leftBtn = slider.querySelector('.MS-left');
+         const rightBtn = slider.querySelector('.MS-right');
 
-  if (!content || items.length === 0) return;
+         if (!content || items.length === 0) return;
 
-  let index = 0;
+         let index = 0;
 
-  function update() {
-    const itemWidth = items[0].getBoundingClientRect().width + 16; // 16 = gap
-    content.style.transform = `translateX(${-index * itemWidth}px)`;
-  }
+         function update() {
+            const itemWidth = items[0].getBoundingClientRect().width + 16; // 16 = gap
+            content.style.transform = `translateX(${-index * itemWidth}px)`;
+         }
 
-  leftBtn && leftBtn.addEventListener('click', () => {
-    index = Math.max(index - 1, 0);
-    update();
-  });
+         leftBtn && leftBtn.addEventListener('click', () => {
+            index = Math.max(index - 1, 0);
+            update();
+         });
 
-  rightBtn && rightBtn.addEventListener('click', () => {
-    index = Math.min(index + 1, items.length - 1);
-    update();
-  });
+         rightBtn && rightBtn.addEventListener('click', () => {
+            index = Math.min(index + 1, items.length - 1);
+            update();
+         });
 
-  // Clickable items (default <a> works naturally)
-})();
-
+         // Clickable items (default <a> works naturally)
+      })();
    </script>
 
 </body>

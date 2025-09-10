@@ -333,8 +333,8 @@ section{
    width: 100%;
    margin-top: 1rem;
    border-radius: 1.5rem;
-   padding:1rem 3rem;
-   font-size: 1.5rem;
+   padding:1.3rem 3rem;
+   font-size: 1.8rem;
    text-transform: capitalize;
    color:var(--white);
    cursor: pointer;
@@ -347,8 +347,8 @@ section{
 .btn:hover,
 .delete-btn:hover,
 .option-btn:hover{
-   background-color: var(--nav-hover-box-color);
-   transform:scale(1.15);
+   filter: brightness(75%);
+   transform:scale(1.05);
 }
 .btn{
    background-color: var(--btn-update);
@@ -477,11 +477,12 @@ header .flex .gif-video {
    transition: 0.5s;
 }
 
-.header .flex .newnavbar a:hover{
+.header .flex .newnavbar a:hover,
+.header .flex .newnavbar a.active {
    color: #0ef;
 }
 
-.header .flex .newnavbar a span{
+.header .flex .newnavbar a span {
    position: absolute;
    top: 0;
    left: 0;
@@ -493,12 +494,14 @@ header .flex .gif-video {
    transform: scale(0) translateY(50px);
    transition: 0.5s;
    opacity: 0;
-}  
+}
 
-.header .flex .newnavbar a:hover span{
+/* Apply same effect when active */
+.header .flex .newnavbar a:hover span,
+.header .flex .newnavbar a.active span {
    transform: scale(1) translateY(0);
    opacity: 1;
-}  
+}
 
 .header .flex .icons div{
    margin-left: 1.7rem;
@@ -708,7 +711,7 @@ header .flex .gif-video {
 }
 
 #mixedSlider .MS-content::-webkit-scrollbar-thumb {
-   background:rgba(120, 119, 119, 0.6);
+   background: rgba(0, 238, 255, 0.4);
    border-radius: 8px;
 }
 
