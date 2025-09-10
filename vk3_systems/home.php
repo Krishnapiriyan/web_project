@@ -31,6 +31,9 @@ include 'components/wishlist_cart.php';
 
    <?php include 'components/user_header.php'; ?>
 
+   <div class="bg-image"></div>
+
+
    <div class="round"></div>
    <div class="round"></div>
    <div class="round"></div>
