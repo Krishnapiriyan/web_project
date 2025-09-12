@@ -40,8 +40,8 @@ if (isset($_SESSION['user_id'])) {
       </div>
 
          <div class="content">
-            <h3>Why choose 3KV Computer Solutions?</h3>
-            <p>At 3KV Computer Solutions, we are dedicated to providing top-quality computers, accessories, and IT services for individuals and businesses. Our store offers the latest laptops, desktops, components, and expert repair services. With reliable products, affordable prices, and trusted after-sales support, we ensure that every customer in Sri Lanka receives the best technology solutions with a personal touch.</p>
+            <h3>Why choose VK3 Computer Solutions?</h3>
+            <p>At VK3 Computer Solutions, we are dedicated to providing top-quality computers, accessories, and IT services for individuals and businesses. Our store offers the latest laptops, desktops, components, and expert repair services. With reliable products, affordable prices, and trusted after-sales support, we ensure that every customer in Sri Lanka receives the best technology solutions with a personal touch.</p>
             <a href="contact.php" class="btn">Contact us</a>
          </div>
 
@@ -59,7 +59,7 @@ if (isset($_SESSION['user_id'])) {
 
             <div class="swiper-slide slide">
                <img src="images/pic-1.png" alt="">
-               <p>Excellent service! I bought my laptop from 3KV Computer Solutions and it works perfectly. The staff were very friendly and supportive.</p>
+               <p>Excellent service! I bought my laptop from VK3 Computer Solutions and it works perfectly. The staff were very friendly and supportive.</p>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -72,7 +72,7 @@ if (isset($_SESSION['user_id'])) {
 
             <div class="swiper-slide slide">
                <img src="images/pic-2.png" alt="">
-               <p>I highly recommend 3KV Computer Solutions for computer accessories. They have a wide range and all are reasonably priced.</p>
+               <p>I highly recommend VK3 Computer Solutions for computer accessories. They have a wide range and all are reasonably priced.</p>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -98,7 +98,7 @@ if (isset($_SESSION['user_id'])) {
 
             <div class="swiper-slide slide">
                <img src="images/pic-4.png" alt="">
-               <p>I bought gaming accessories here and the quality is excellent. 3KV Computer Solutions is my go-to computer store now!</p>
+               <p>I bought gaming accessories here and the quality is excellent. VK3 Computer Solutions is my go-to computer store now!</p>
                <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -124,7 +124,7 @@ if (isset($_SESSION['user_id'])) {
 
       <div class="swiper-slide slide">
          <img src="images/pic-6.png" alt="">
-         <p>Very satisfied with their after-sales support. My warranty claim was handled smoothly. Thank you, 3KV Computer Solutions!</p>
+         <p>Very satisfied with their after-sales support. My warranty claim was handled smoothly. Thank you, VK3 Computer Solutions!</p>
          <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
