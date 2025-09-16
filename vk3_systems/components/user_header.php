@@ -20,7 +20,9 @@ if (isset($message)) {
             <source src="new_image\icon.mp4" type="video/mp4">
             Your browser does not support the video tag.
          </video></a>
-
+       <!-- <a href="home.php" class="logo">
+               <img src=" ../new_image/logo.png" alt="Logo" style="height:35px; vertical-align:middle; margin-right:8px;"><span>Systems</span>
+            </a> -->
       <!-- <a href="home.php" class="logo">Shopie<span>.</span></a> -->
 
       <?php

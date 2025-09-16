@@ -1,41 +1,54 @@
 <footer class="footer">
 
-   <section class="grid">
-
+   <div class="grid">
+      
       <div class="box">
-         <h3>quick links</h3>
-         <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
-         <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-         <a href="shop.php"> <i class="fas fa-angle-right"></i> shop</a>
-         <a href="contact.php"> <i class="fas fa-angle-right"></i> contact</a>
+         <img src="components\logo.png" alt="Logo"style="height:35px; vertical-align:middle; margin-right:8px;"><span>Systems</span> 
+         <p> Our system provides reliable performance with high-quality spare parts, 
+         including CPU, RAM, storage, and motherboard, ensuring smooth and efficient computing.</p>
+         <br>
+         <h3>follow us<div class="underline"><span></span></div></h3>
+      
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+            
+      <div class="box">
+         <h3>quick links<div class="underline"><span></span></div></h3>
+         <ul>
+            <li><a href="home.php"> home</a></li>
+            <li><a href="about.php"></i> about</a></li>
+            <li><a href="shop.php"> shop</a></li>
+            <li><a href="contact.php"> contact</a></li>
+         </ul>
+      </div>
+      
+      <div class="box">
+         <h3>extra links<div class="underline"><span></span></div></h3>
+         <ul>
+            <li><a href="user_login.php"> login</a></li>
+            <li><a href="user_register.php"> register</a></li>
+            <li><a href="cart.php"> cart</a></li>
+            <li><a href="orders.php"> orders</a></li>
+         </ul>
       </div>
 
       <div class="box">
-         <h3>extra links</h3>
-         <a href="user_login.php"> <i class="fas fa-angle-right"></i> login</a>
-         <a href="user_register.php"> <i class="fas fa-angle-right"></i> register</a>
-         <a href="cart.php"> <i class="fas fa-angle-right"></i> cart</a>
-         <a href="orders.php"> <i class="fas fa-angle-right"></i> orders</a>
+         <h3>contact us<div class="underline"><span></span></div></h3>
+         <ul>
+            <li><a href="tel:+94xxxxxxxxx"><i class="fas fa-phone"></i> +94 xxx xxx xxx</a></li>
+            <li><a href="mailto:vk_3systems@gmail.com"><i class="fas fa-envelope"></i> systems@gmail.com</a></li>
+            <li><a href="https://share.google/yfTlj0MfhdzJD6ZcQ"><i class="fas fa-map-marker-alt"></i> location</a></li>
+         </ul>
+   
       </div>
 
-      <div class="box">
-         <h3>contact us</h3>
-         <a href="tel:+94763967459"><i class="fas fa-phone"></i> +94 76 396 7458</a>
-         <a href="tel:+94765468954"><i class="fas fa-phone"></i> +94 76 880 0280</a>
-         <a href="mailto:kaspus@gmail.com"><i class="fas fa-envelope"></i> kaspus@gmail.com</a>
-         <a href="https://maps.app.goo.gl/MU7Za5jr17nQWpZ86"><i class="fas fa-map-marker-alt"></i> Columbuthurai </a>
-      </div>
+</div>
+<hr>
+         <div class="copyright">&copy; copyright @ <?= date('Y'); ?> by <span>vk3_systems</span> | all rights reserved!</div>
 
-      <div class="box">
-         <h3>follow us</h3>
-         <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-         <a href="#"><i class="fab fa-twitter"></i>twitter</a>
-         <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-         <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
-      </div>
 
-   </section>
-
-   <div class="credit">&copy; copyright @ <?= date('Y'); ?> by <span>mr.Krishnapiriyan</span> | all rights reserved!</div>
 
 </footer>

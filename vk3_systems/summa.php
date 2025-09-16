@@ -358,24 +358,24 @@ include 'components/wishlist_cart.php';
 
 
       // basic styles for pagination and dots
-      (function() {
-         const style = document.createElement('style');
-         style.textContent = `
-   .swiper { position:relative; overflow:hidden; }
-   .swiper-wrapper{ will-change:transform; }
-   .slider-pagination{ position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:5; }
-   .slider-dot{ width:8px; height:8px; border-radius:50%; background:#ddd; border:none; padding:0; cursor:pointer; }
-      .slider-dot.active{ background:#333; }
-   .flex-direction-nav{ position:absolute; top:50%; left:0; right:0; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 10px; z-index:60; opacity:0; transition:opacity 180ms ease; pointer-events:none; }
-   /* arrows hidden by default, shown on hover over the slider container */
-   .swiper:hover .flex-direction-nav{ opacity:1; pointer-events:auto; }
-   .flex-direction-nav a{ background:rgba(0,0,0,0.4); color:#fff; padding:8px 10px; border-radius:4px; text-decoration:none; font-size:18px; display:inline-block; }
-   .flex-direction-nav a:hover{ background:rgba(0,0,0,0.6); }
-   /* also show when a child receives focus (keyboard/touch) */
-   .flex-direction-nav a:focus{ outline:2px solid rgba(255,255,255,0.5); }
-   `;
-         document.head.appendChild(style);
-      })();
+   //    (function() {
+   //       const style = document.createElement('style');
+   //       style.textContent = `
+   // .swiper { position:relative; overflow:hidden; }
+   // .swiper-wrapper{ will-change:transform; }
+   // .slider-pagination{ position:absolute; bottom:10px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:5; }
+   // .slider-dot{ width:8px; height:8px; border-radius:50%; background:#ddd; border:none; padding:0; cursor:pointer; }
+   //    .slider-dot.active{ background:#333; }
+   // .flex-direction-nav{ position:absolute; top:50%; left:0; right:0; display:flex; justify-content:space-between; transform:translateY(-50%); padding:0 10px; z-index:60; opacity:0; transition:opacity 180ms ease; pointer-events:none; }
+   // /* arrows hidden by default, shown on hover over the slider container */
+   // .swiper:hover .flex-direction-nav{ opacity:1; pointer-events:auto; }
+   // .flex-direction-nav a{ background:rgba(0,0,0,0.4); color:#fff; padding:8px 10px; border-radius:4px; text-decoration:none; font-size:18px; display:inline-block; }
+   // .flex-direction-nav a:hover{ background:rgba(0,0,0,0.6); }
+   // /* also show when a child receives focus (keyboard/touch) */
+   // .flex-direction-nav a:focus{ outline:2px solid rgba(255,255,255,0.5); }
+   // `;
+   //       document.head.appendChild(style);
+   //    })();
    </script>
 
    <script>

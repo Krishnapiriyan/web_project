@@ -31,7 +31,7 @@ include 'components/wishlist_cart.php';
 
    <?php include 'components/user_header.php'; ?>
 
-   <div class="bg-image"></div>
+   <!-- <div class="bg-image"></div> -->
 
 
    <div class="round"></div>
@@ -47,84 +47,77 @@ include 'components/wishlist_cart.php';
    <div class="round"></div>
    <div class="round"></div>
    <div class="round"></div>
-   <div class="round"></div>
+   
+   <div class="bghome">
+      <div class ="home_flex">
+         
+         <div class="text_box">
+               <h1>VK3_SYSTEMS</h1>
+               <p class="description">
+                  "Trusted Computer Spare Parts for Gamers, Creators, and Professionals 
+                  — Delivered with Reliability and Performance."
+               </p>
 
-   <div class="home-bg">
+               <div class="tag-box">
+                  <div class="g_btn">GET START</div>
+               </div>  
+         </div>
+         <div class="back_ground">
 
-      <section class="home">
+            <script type="module" class ="bg_img" src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/T0bXwUWRK0jyRVTt/scene.splinecode"></spline-viewer>
 
-         <div class="swiper home-slider">
+         </div>
+      </div> 
+   </div>
 
-            <div class="swiper-wrapper">
+<div class="home-bg">
 
-               <div class="swiper-slide slide">
-                  <div class="image">
-                     <img src="new_image\home_slider\1.png" alt="">
+   <section class="home">
+
+      <div class="swiper home-slider">
+         <div class="swiper-wrapper">
+
+            <?php
+            $select_products = $conn->prepare("SELECT * FROM advertise LIMIT 6");
+            $select_products->execute();
+
+            if ($select_products->rowCount() > 0) {
+               while ($row = $select_products->fetch(PDO::FETCH_ASSOC)) {
+                  ?>
+                  <div class="swiper-slide slide">
+                     <div class="image">
+                        <img src="uploaded_img/<?= htmlspecialchars($row['image_01']); ?>" alt="Ad Image">
+                     </div>
+                     <div class="content">
+                        <h3><?= htmlspecialchars($row['description']); ?></h3>
+                        <span><?= htmlspecialchars($row['details']); ?></span>
+                        <a href="shop.php" class="btn">See More</a>
+                     </div>
                   </div>
-                  <div class="content">
-                     <h3>Fast Delivery Service</h3>
-                     <span>Perfect for students, professionals, and gamers who want their laptops without the wait.</span>
-                     <a href="orders.php" class="btn">order now</a>
-                  </div>
-               </div>
-
-               <div class="swiper-slide slide">
-                  <div class="image">
-                     <img src="new_image\home_slider\2.png" alt="">
-                  </div>
-                  <div class="content">
-                     <h3>New Gaming Laptop Series Available!</h3>
-                     <span>Discover powerful gaming laptops – cutting-edge technology, fast processors, advanced graphics, and unbeatable gaming experience.</span>
-                     <a href="shop.php" class="btn">shop now</a>
-                  </div>
-               </div>
-
-               <div class="swiper-slide slide">
-                  <div class="image">
-                     <img src="new_image\home_slider\3.png" alt="">
-                  </div>
-                  <div class="content">
-                     <h3>Wide selection of NVIDIA RTX</h3>
-                     <span>Experience ultimate gaming with our RTX laptop range – powerful graphics, smooth performance, immersive displays included.</span>
-                     <a href="shop.php" class="btn">shop now</a>
-                  </div>
-               </div>
-
-               <div class="swiper-slide slide">
-                  <div class="image">
-                     <img src="new_image\home_slider\4.png" alt="">
-                  </div>
-                  <div class="content">
-                     <h3>ROG laptops deliver maximum processor power</h3>
-                     <span>ROG laptops with maximum processors – ultimate speed, exceptional performance, and immersive gaming experiences.</span>
-                     <a href="shop.php" class="btn">shop now</a>
-                  </div>
-               </div>
-
-               <div class="swiper-slide slide">
-                  <div class="image">
-                     <img src="new_image\home_slider\5.png" alt="">
-                  </div>
-                  <div class="content">
-                     <h3>Exclusive university student offers</h3>
-                     <span>University student discounts – grab high-performance laptops and accessories at unbeatable prices today.</span>
-                     <a href="shop.php" class="btn">shop now</a>
-                  </div>
-               </div>
-
-            </div>
-            <div class="flex-direction-nav">
-               <li class="flex-nav-prev"><a class="flex-prev" href="#" aria-label="Previous">&#10094;</a></li>
-               <li class="flex-nav-next"><a class="flex-next" href="#" aria-label="Next">&#10095;</a></li>
-            </div>
-            <div class="swiper-pagination"></div>
+                  <?php
+               }
+            } else {
+               echo "<p>No advertisements found.</p>";
+            }
+            ?>
 
          </div>
 
-      </section>
+         <!-- Navigation buttons -->
+         <div class="flex-direction-nav">
+            <li class="flex-nav-prev"><a class="flex-prev" href="#" aria-label="Previous">&#10094;</a></li>
+            <li class="flex-nav-next"><a class="flex-next" href="#" aria-label="Next">&#10095;</a></li>
+         </div>
 
-   </div>
+         <!-- Pagination -->
+         <div class="swiper-pagination"></div>
 
+      </div>
+
+   </section>
+
+</div>
 
    <section class="category">
 
@@ -231,8 +224,6 @@ include 'components/wishlist_cart.php';
       </div>
 
    </section>
-
-
 
    <section class="home-products">
 
@@ -411,12 +402,15 @@ include 'components/wishlist_cart.php';
          // Clickable items (default <a> works naturally)
       })();
    </script>
-
+   <
+   <script>
+      document.querySelector(".g_btn").addEventListener("click", function () {
+         window.scrollBy({
+            top: 800, // scroll down 500px
+            left: 0,
+            behavior: "smooth"
+         });
+      });
+   </script>
 </body>
-
 </html>
-
-
-
-
-<h1>check</h1>
