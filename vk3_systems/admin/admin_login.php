@@ -104,12 +104,12 @@ if(isset($_POST['reset'])){
                   <p>default username = <span>admin</span><br> & password = <span>111</span></p>
 
                   <div class="input-box">
-                        <input type="text" name="name" required placeholder="enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="text" name="name" required placeholder="Enter your username" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-user' ></i>
                   </div>
 
                   <div class="input-box">
-                        <input type="password" name="pass" required placeholder="enter your password" oninput="this.value = this.value.replace(/\s/g, '')">
+                        <input type="password" name="pass" required placeholder="Enter your password" oninput="this.value = this.value.replace(/\s/g, '')">
                         <i class='bx bxs-lock-alt' ></i>
                   </div>
 
@@ -121,7 +121,7 @@ if(isset($_POST['reset'])){
                   <button type="submit" class="btn" name="submit">Login</button>
 
                   <div class="register-link">
-                        <p>Don't have an account?<a href="../admin/newregister_admin.php">Register</a></p> 
+                        <p>Don't have an account? <a href="../admin/newregister_admin.php">Register</a></p> 
                   </div> 
 
             </form>

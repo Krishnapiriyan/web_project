@@ -414,34 +414,50 @@ section{
    gap:1rem;
 }
 
-.message{
-   position: sticky;
-   top:0;
-   max-width: 1200px;
-   margin:0 auto;
-   background-color: var(--light-bg);
-   padding:2rem;
+.message {
+   position: fixed;
+   top: 1rem;
+   left: 50%;
+   transform: translateX(-50%);
+   max-width: 600px;
+   width: 90%;
+   background: linear-gradient(135deg, #011dbb, var(--nav-icon-hover-color)); /* trendy gradient */
+   color: #fff;
+   padding: 1.5rem 2rem;
+   border-radius: 12px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   gap:1.5rem;
-   z-index: 1100;
+   gap: 1rem;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+   font-family: 'Poppins', sans-serif;
+   z-index: 9999;
+   animation: slideDown 0.5s ease forwards;
 }
 
-.message span{
+.message span {
    font-size: 2rem;
-   color:var(--black);
+   font-weight: 500;
 }
 
-.message i{
+.message i {
    cursor: pointer;
-   color:var(--red);
+   color: #ff6b6b;
    font-size: 2.5rem;
+   transition: transform 0.2s, color 0.2s;
 }
 
-.message i:hover{
-   color:var(--black);
+.message i:hover {
+   color: #3d3b3b;
+   transform: scale(1.2);
 }
+
+/* Smooth slide down animation */
+@keyframes slideDown {
+   0% { transform: translate(-50%, -100%); opacity: 0; }
+   100% { transform: translate(-50%, 0); opacity: 1; }
+}
+
 
 .empty{
    padding:1.5rem;
