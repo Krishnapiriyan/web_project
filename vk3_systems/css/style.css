@@ -848,8 +848,7 @@ header .flex .gif-video {
 
 .MS-content .item{
    flex: 0 0 auto;
-   width: 170px; /* compact card width */
-   /* background: var(--white); */
+   width: 170px; 
    display:flex;
    flex-direction: column;
    align-items: center;
@@ -865,7 +864,6 @@ header .flex .gif-video {
    height: 12rem;
    object-fit: contain;
    border-radius: 10px;
-   /* background: linear-gradient(180deg, rgba(128, 80, 80, 0.02), rgba(0,0,0,0.01)); */
 }
 
 .MS-content .item img:hover{
@@ -963,12 +961,8 @@ header .flex .gif-video {
     }
 
 
-/* *********************** 
 
 
-
-
-*/
 .home-products form{
    width: 600px;
    background: transparent;
@@ -1350,8 +1344,8 @@ header .flex .gif-video {
 }
 
 .about {
-    margin-top: -100px; /* moves the section 50px upwards */
-    position: relative; /* ensures any positioning works correctly */
+    margin-top: -100px; 
+    position: relative; 
 }
 
 @media (max-width:991px) {
@@ -1540,21 +1534,17 @@ header .flex .gif-video {
 }
 
 .cart-total{
-   /* max-width: 50rem; */
    margin:0 auto;
    margin-top: 3rem;
-   /* background-color: var(--black); */
    border:var(--border);
    border-radius: .5rem;;
    padding:2rem;
    text-align: center;
-
    width: 420px;   
    background: transparent;
    border: 2px solid rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(20px);
    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
    color: #fff;
    border-radius: 10px;
    padding: 30px 40px;
@@ -1662,28 +1652,21 @@ header .flex .gif-video {
 }
 
 .orders .box-container{
-   
-
    display: grid;
    grid-template-columns: repeat(auto-fit, 80rem);
    gap: 1.5rem;
    justify-content: center;
    align-items: flex-start;
    min-height: 100vh
-
-   
 }
 
 .orders .box-container .box{
-   
-
    width: 600px;
    height: auto;
    background: transparent;
    border: 2px solid rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(20px);
    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
    color: #fff;
    border-radius: 10px;
    padding: 30px 30px;
@@ -1707,7 +1690,6 @@ header .flex .gif-video {
 .footer{
    font-family :"poppins",sans-serif;
    width: 100%;
-   /* position: absolute; */
    bottom: 0;
    background: linear-gradient(to right, #00093c, #2b0b00);
    color: #fff;
@@ -1716,8 +1698,6 @@ header .flex .gif-video {
    font-size: 13px;
    line-height: 20px;
    border-top:1.5px solid var(--light-color);
-
- 
 }
 
 .footer .grid{
@@ -1785,7 +1765,6 @@ header .flex .gif-video {
 }
 .footer .copyright{
    text-align: center;
-
 }
 
 .footer .grid .box a:hover{
@@ -1927,11 +1906,6 @@ html{
    width: 90%;
    align-items: center;
    margin-left: 100px;
-
-   /* display: flex;
-   justify-content: center; */
-
-   
 }
 
 .swiper.home-slider .swiper-slide .image img {
@@ -1949,8 +1923,6 @@ html{
 
 /* overlay content box */
 .swiper.home-slider .swiper-slide .content {
-   /* position: relative;
-   bottom: 24px;*/
    max-width: 50%;
    padding: 12px 18px;
    background: rgba(0, 0, 0, 0.45);
@@ -1962,8 +1934,6 @@ html{
     transform: translateY(-50%);
     width: 400px;
     text-align: left;
-    /* color: #fff; */
-    /* display: none; */
    backdrop-filter: blur(4px);
 }
 
@@ -1983,30 +1953,24 @@ html{
    display: block;
    font-size: 1.6rem;
    opacity: 0.95;
-
    margin-top: 10px;
    margin-bottom: 20px;
    font-size: 18px;
    margin-left: 5px;
-
-
 }
 
 .swiper.home-slider .swiper-slide .content h3 {
    font-size: 2.6rem;
    margin-top: 6px;
-
    font-size: 40px;
-    text-transform: uppercase;
-    color: #14ff72cb;
-    font-weight: bold;
-    line-height: 1;
+   text-transform: uppercase;
+   color: #14ff72cb;
+   font-weight: bold;
+   line-height: 1;
 }
 
 
 .swiper.home-slider .swiper-slide .content .btn {
-  
-
    display: block;
    width: 80%;
    margin-top: 1rem;
@@ -2017,7 +1981,6 @@ html{
    color:var(--white);
    cursor: pointer;
    text-align: center;
-
 }
 
 /* pagination dots */
@@ -2029,7 +1992,6 @@ html{
    display: flex;
    gap: 8px;
    z-index: 50;
-
 }
 
 .slider-dot {
@@ -2046,6 +2008,7 @@ html{
 .slider-dot.active {
    background: var(--light-bg);
 }
+
 
 /* prev/next arrows (show on hover) */
 .flex-direction-nav {
@@ -2177,20 +2140,18 @@ html{
       position: absolute;
       top:99%; left:0; right:0;
       background: #0b1b2e;
-      max-height: 14rem; /* smaller maximum height */
+      max-height: 14rem; 
       padding: 6px 0;
-      overflow-y: auto; /* allow scrolling if many items */
+      overflow-y: auto; 
       transition: .2s linear;
-      padding-top: 110px; /* space for header */
-      /* background: transparent; */
+      padding-top: 110px; 
       border: 2px solid rgba(255, 255, 255, 0.2);
-      /* backdrop-filter: blur(20px); */
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       border-radius: 15px;
    }
 
    .header .flex .newnavbar.active{
-      display: flex;             /* show when active */
+      display: flex;             
       flex-direction: column;
       align-items: stretch;
       gap: 4px;
@@ -2205,7 +2166,7 @@ html{
       padding: 10px 16px;
       color: #fff;
       box-sizing: border-box;
-      text-align: center; /* center label on each line */
+      text-align: center; 
       border-bottom: 1px solid rgba(255,255,255,0.03);
       border-radius: 4px;
    }
@@ -2332,33 +2293,21 @@ html{
 }
 
 .repairs .box-container{
-   /* display: flex;
-   flex-wrap: wrap;
-   gap:1.5rem;
-   align-items: flex-start; */
-
    display: grid;
    grid-template-columns: repeat(auto-fit, 80rem);
    gap: 1.5rem;
    justify-content: center;
    align-items: flex-start;
    min-height: 100vh
-
-   
 }
 
 .repairs .box-container .box{
-   /* padding:1rem 2rem;
-   flex:1 1 40rem;
-   border-radius: .5rem; */
-
    width: 600px;
    height: auto;
    background: transparent;
    border: 2px solid rgba(255, 255, 255, 0.2);
    backdrop-filter: blur(20px);
    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
    color: #fff;
    border-radius: 10px;
    padding: 30px 30px;
