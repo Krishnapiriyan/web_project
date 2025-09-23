@@ -214,10 +214,10 @@ include 'components/wishlist_cart.php';
                   </div>
                </div>
 
-               <div class="MS-controls">
+               <!-- <div class="MS-controls">
                   <button class="MS-left" aria-label="previous">&#10094;</button>
                   <button class="MS-right" aria-label="next">&#10095;</button>
-               </div>
+               </div> -->
 
             </div>
          </div>

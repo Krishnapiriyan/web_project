@@ -926,6 +926,8 @@ section{
    height: 5.4rem;
    resize: none;
    color: #000;
+   white-space: pre-wrap; /* preserves line breaks */
+
 }
 
 .add-products .newflex{
@@ -949,6 +951,17 @@ section{
    border-radius: .5rem;
    padding:1.4rem;
    width: 100%;
+}
+
+.add-products form .inputBox .select{
+   margin-bottom: .5rem;
+   width: 100%;
+   background-color: var(--light-bg);
+   padding:1rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   border:var(--border);
 }
 
 .add-products form input[type="file"]{
@@ -1052,6 +1065,13 @@ section{
    height: 20rem;
    object-fit: contain;
    margin-bottom: 1.5rem;
+}
+
+.show-products .box-container .newbox .category{
+   font-size: 2rem;
+   color:var(--white);
+   margin:1rem 0;
+   font-family: Courier, monospace;
 }
 
 .show-products .box-container .newbox .description{
@@ -1178,6 +1198,17 @@ section{
 .update-product form span{
    font-size: 1.7rem;
    color:var(--light-color);
+}
+
+.update-product form .select{
+   margin-bottom: .5rem;
+   width: 100%;
+   background-color: var(--light-bg);
+   padding:1rem;
+   font-size: 1.8rem;
+   color:var(--black);
+   border-radius: .5rem;
+   border:var(--border);
 }
 
 .update-product form textarea{

@@ -1332,6 +1332,7 @@ header .flex .gif-video {
    border:var(--border);
    padding:2rem;
    overflow: hidden;
+   height: 400px;
 }
 
 .products .box-container .box img{
@@ -1471,6 +1472,10 @@ header .flex .gif-video {
    border-radius: 1rem;
 
 }
+.about{
+   display: flex;
+   min-height: 100vh
+}
 
 .about .row{
    display: flex;
@@ -1485,6 +1490,7 @@ header .flex .gif-video {
 
 .about .row .image img{
    width: 100%;
+   border: 5px solid grey;
 }
 
 .about .row .content{
@@ -1513,7 +1519,19 @@ header .flex .gif-video {
     position: relative; /* ensures any positioning works correctly */
 }
 
-
+@media (max-width:991px) {
+   .about{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+   }
+   .about .row .image{
+      flex:1 1 40rem;
+      margin-top: 100px;
+}
+   
+}
 .reviews .slide{
    padding:2rem;
    /* text-align: center;
@@ -1568,7 +1586,7 @@ header .flex .gif-video {
 
 .reviews .slide h3{
    font-size: 2rem;
-   color:var(--black);
+   color:var(--white);
 }
 
 .contact{

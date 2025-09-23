@@ -38,7 +38,7 @@
       <div class="box">
          <h3>contact us<div class="underline"><span></span></div></h3>
          <ul>
-            <li><a href="tel:+94xxxxxxxxx"><i class="fas fa-phone"></i> +94 xxx xxx xxx</a></li>
+            <li><a href="tel:+94763967459"><i class="fas fa-phone"></i> +94 76 396 7459</a></li>
             <li><a href="mailto:vk_3systems@gmail.com"><i class="fas fa-envelope"></i> systems@gmail.com</a></li>
             <li><a href="https://share.google/yfTlj0MfhdzJD6ZcQ"><i class="fas fa-map-marker-alt"></i> location</a></li>
          </ul>
