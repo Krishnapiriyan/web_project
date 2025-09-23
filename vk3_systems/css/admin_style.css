@@ -1623,3 +1623,220 @@ section{
    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+.repair_details h3 {
+   color: #34495e;
+   margin: 20px 0 15px;
+   font-weight: 600;
+}
+
+.repair_details .box-container {
+   background: #fff;
+   padding: 25px 30px;
+   border-radius: 14px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= CARDS ================= */
+.card {
+   display: inline-block;
+   min-width: 180px;
+   padding: 18px 22px;
+   margin: 10px 15px 10px 0;
+   border-radius: 10px;
+   color: #fff;
+   font-weight: 600;
+   font-size: 1rem;
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+   transition: all 0.25s ease-in-out;
+}
+
+.card:hover {
+   transform: translateY(-4px);
+}
+
+.card:nth-child(5) {
+   background: linear-gradient(135deg, #1a6da4, #1a6da48e);
+}
+
+.card:nth-child(2) {
+   background: linear-gradient(135deg, #27ae60, #6dd5a0);
+}
+
+.card:nth-child(3) {
+   background: linear-gradient(135deg, #f39c12, #f1c40f);
+}
+
+.card:nth-child(4) {
+   background: linear-gradient(135deg, #e74c3c, #ff7675);
+}
+
+/* ================= TABLES ================= */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin: 20px 0 30px;
+   background: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+table th,
+table td {
+   padding: 14px 18px;
+   text-align: left;
+}
+
+table th {
+   background: #2c3e50;
+   color: #fff;
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+}
+
+table tr:nth-child(even) {
+   background: #f9fafc;
+}
+
+table tr:hover td {
+   background: #f4f9ff;
+   transition: 0.2s;
+}
+
+/* ================= BUTTONS ================= */
+button {
+   padding: 8px 16px;
+   border: none;
+   border-radius: 6px;
+   font-size: 0.9rem;
+   font-weight: 500;
+   cursor: pointer;
+   margin: 2px;
+   transition: all 0.25s ease;
+}
+
+button:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:first-of-type {
+   background: #27ae60;
+   color: #fff;
+}
+
+button:nth-of-type(2) {
+   background: #e74c3c;
+   color: #fff;
+}
+
+/* ================= ALERTS ================= */
+.alert {
+   padding: 12px 18px;
+   margin: 20px 0;
+   border-radius: 8px;
+   font-weight: 500;
+}
+
+.alert.success {
+   background: #27ae60;
+   color: #fff;
+}
+
+.alert.error {
+   background: #e74c3c;
+   color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+   .repair_details {
+      padding: 15px;
+   }
+
+   .card {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+   }
+   table.repair-requests th{
+      display: none;
+   }
+
+   /* Repair Requests Table */
+   table.repair-requests,
+   table.repair-requests thead,
+   table.repair-requests tbody,
+   table.repair-requests td,
+   
+   table.repair-requests tr {
+      display: block;
+      width: 100%;
+   }
+
+   table.repair-requests tr {
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+   }
+
+   table.repair-requests td {
+      padding-left: 45%;
+      text-align: right;
+      position: relative;
+   }
+
+   table.repair-requests td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+   }
+   table.servicer-details th{
+      display: none;
+   }
+
+   /* Servicer Details Table */
+   table.servicer-details,
+   table.servicer-details thead,
+   table.servicer-details tbody,
+   table.servicer-details td,
+   table.servicer-details tr {
+      display: block;
+      width: 100%;
+   }
+
+   table.servicer-details tr {
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+   }
+
+   table.servicer-details td {
+      padding-left: 45%;
+      text-align: right;
+      position: relative;
+   }
+
+   table.servicer-details td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+   }
+}

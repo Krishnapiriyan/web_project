@@ -32,6 +32,7 @@
             <li><a href="user_register.php"> register</a></li>
             <li><a href="cart.php"> cart</a></li>
             <li><a href="orders.php"> orders</a></li>
+            <li><a href="repair_ser.php">repairs</a></li>
          </ul>
       </div>
 
