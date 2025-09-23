@@ -25,6 +25,7 @@
                <a href="../admin/admin_accounts.php">Admins<span></span></a>
                <a href="../admin/users_accounts.php">Users<span></span></a>
                <a href="../admin/messages.php">Messages<span></span></a>
+               <a href="../admin/repair_details.php">Repairs<span></span></a>
             </nav>
 
       <div class="icons">

@@ -36,6 +36,7 @@ if (isset($message)) {
          <a href="orders.php" class="<?= ($current_page == 'orders.php') ? 'active' : '' ?>">Orders<span></span></a>
          <a href="shop.php" class="<?= ($current_page == 'shop.php') ? 'active' : '' ?>">Shop<span></span></a>
          <a href="contact.php" class="<?= ($current_page == 'contact.php') ? 'active' : '' ?>">Contact us<span></span></a>
+         <a href="repair_ser.php" class="<?= ($current_page == 'repair_ser.php') ? 'active' : '' ?>">Repairs<span></span></a>
       </nav>
 
 
