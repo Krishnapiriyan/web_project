@@ -33,6 +33,34 @@ include 'components/wishlist_cart.php';
    
 <?php include 'components/user_header.php'; ?>
 
+<!-- 🔹 Price Filter Section -->
+<section class="filter-section">
+   <h2>Filter by Price</h2>
+   <form method="get" action="">
+      <div class="price-slider">
+         <div class="slider-track"></div>
+
+         <input type="range" name="min_price" id="min_price"
+            min="0" max="500000" step="100"
+            value="<?= isset($_GET['min_price']) ? $_GET['min_price'] : 0; ?>"
+            oninput="updateSlider()">
+
+         <input type="range" name="max_price" id="max_price"
+            min="0" max="500000" step="100"
+            value="<?= isset($_GET['max_price']) ? $_GET['max_price'] : 500000; ?>"
+            oninput="updateSlider()">
+      </div>
+
+      <div class="price-values">
+         <span>Min: LKR <span id="min_val"><?= isset($_GET['min_price']) ? $_GET['min_price'] : 0; ?></span></span>
+         <span>Max: LKR <span id="max_val"><?= isset($_GET['max_price']) ? $_GET['max_price'] : 500000; ?></span></span>
+      </div>
+
+      <button type="submit" class="btn">Apply Filter</button>
+   </form>
+</section>
+
+
 <section class="products">
 
    <h1 class="heading">latest products</h1>
@@ -40,8 +68,15 @@ include 'components/wishlist_cart.php';
    <div class="box-container">
 
    <?php
-     $select_products = $conn->prepare("SELECT * FROM `products`"); 
+     // 🔹 Get filter values (default = show all)
+     $min_price = isset($_GET['min_price']) ? (int)$_GET['min_price'] : 0;
+     $max_price = isset($_GET['max_price']) ? (int)$_GET['max_price'] : 500000;
+
+     $select_products = $conn->prepare("SELECT * FROM `products` WHERE price BETWEEN :min AND :max ORDER BY price ASC"); 
+     $select_products->bindParam(':min', $min_price, PDO::PARAM_INT);
+     $select_products->bindParam(':max', $max_price, PDO::PARAM_INT);
      $select_products->execute();
+
      if($select_products->rowCount() > 0){
       while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
    ?>
@@ -63,7 +98,7 @@ include 'components/wishlist_cart.php';
    <?php
       }
    }else{
-      echo '<p class="empty">no products found!</p>';
+      echo '<p class="empty">No products found in this price range!</p>';
    }
    ?>
 
@@ -72,20 +107,54 @@ include 'components/wishlist_cart.php';
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <?php include 'components/footer.php'; ?>
 
-<script src="js/script.js"></script>
+
+<script>
+const minSlider = document.getElementById("min_price");
+const maxSlider = document.getElementById("max_price");
+const minValSpan = document.getElementById("min_val");
+const maxValSpan = document.getElementById("max_val");
+const sliderTrack = document.querySelector(".slider-track");
+
+// Initialize min/max values
+if(!minSlider.value) minSlider.value = 0;
+if(!maxSlider.value) maxSlider.value = 500000;
+
+// Update slider function
+function updateSlider() {
+    let minVal = parseInt(minSlider.value);
+    let maxVal = parseInt(maxSlider.value);
+
+    // Prevent overlap (500 gap)
+    if(minVal > maxVal - 500) {
+        minVal = maxVal - 500;
+        minSlider.value = minVal;
+    }
+    if(maxVal < minVal + 500) {
+        maxVal = minVal + 500;
+        maxSlider.value = maxVal;
+    }
+
+    // Update text
+    minValSpan.textContent = minVal.toLocaleString();
+    maxValSpan.textContent = maxVal.toLocaleString();
+
+    // Update highlighted range
+    const percent1 = ((minVal - minSlider.min) / (minSlider.max - minSlider.min)) * 100;
+    const percent2 = ((maxVal - maxSlider.min) / (maxSlider.max - maxSlider.min)) * 100;
+
+    sliderTrack.style.background = `linear-gradient(to right, #ddd ${percent1}% , #007BFF ${percent1}% , #007BFF ${percent2}%, #ddd ${percent2}%)`;
+}
+
+// Initialize slider
+updateSlider();
+
+// Trigger update on input
+minSlider.addEventListener("input", updateSlider);
+maxSlider.addEventListener("input", updateSlider);
+</script>
+
 
 </body>
 </html>
